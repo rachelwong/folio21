@@ -60,6 +60,25 @@ export default function Home() {
             </div>
           </div>
         </div>
+        <div className={styles['project-row']}>
+          <div className={styles['project-textwrapper']}>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vehicula quis risus ut pharetra. Vivamus scelerisque lacus sed nibh venenatis viverra.</p>
+            <ul className={styles['project-tags']}>
+              <li>MongoDB</li>
+              <li>React</li>
+              <li>NodeJS</li>
+              <li>CSS3/HTML5</li>
+            </ul>
+            <div className={styles['project-actions']}>
+              <Link href="/" className="project-actions__repolink">See Repo</Link>
+              <Link href="/" className="project-actions__livelink">Go Live</Link>
+            </div>
+          </div>
+
+          <div className={styles['project-imagewrapper']}>
+            <Image src={ LinkedoutImage } width={500} height={280} />
+          </div>
+        </div>
       </div>
 
       {/* display shots */}

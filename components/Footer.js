@@ -1,6 +1,5 @@
 import Image from 'next/image'
 import footerImage from '../public/footer-image.png'
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styles from '../styles/Footer.module.scss';
 import Link from 'next/link';
 import GithubIcon from '../public/github-brands.svg'
