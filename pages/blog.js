@@ -19,15 +19,14 @@ export const getStaticProps = async () => {
 }
 
 const blog = ({ posts }) => {
-  console.log("posts", posts)
   if (posts.length == 0) { return "" }
   return (
     <div>
       <h1>Blog</h1>
       <div className="blog-container">
-        {posts.length > 0 && posts.map((post, postIndex) => {
+        {posts.length > 0 && posts.map((post, postIndex) => (
           <PostEntry post={post} key={ postIndex} />
-        })}
+        ))}
       </div>
     </div>
   )

@@ -18,6 +18,11 @@ export default function Home() {
         <meta name="theme-color" content="#ffffff" />
       </Head>
       <h1>Home</h1>
+
+      {/* display all three projects */}
+
+      {/* display shots */}
+
     </div>
   )
 }
