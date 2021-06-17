@@ -1,0 +1,21 @@
+@use './mixins.scss';
+@import './mixins.scss';
+
+.carousel-slide1,
+.carousel-slide2,
+.carousel-slide3 {
+  display:block;
+  width: 100%;
+  height: 100vh;
+}
+
+.carousel-slide1{
+  background: linear-gradient(180deg, rgba(255, 174, 174, 0.5), #d2c3ff) !important;
+}
+.carousel-slide2{
+  background: linear-gradient(180deg, rgba(255, 205, 55, 0.59), rgba(221, 149, 126, 0.5))
+ !important;
+}
+.carousel-slide3{
+  background: linear-gradient(180deg, #acffff, #9d9ad5) !important;
+}

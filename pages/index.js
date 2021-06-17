@@ -1,9 +1,7 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import styles from '../styles/Home.module.scss'
-
+import Carousel from '../components/Carousel'
 export default function Home() {
-  Home.layout = "homelayout"
 
   return (
     <div className={styles.container}>
@@ -17,10 +15,18 @@ export default function Home() {
         <link rel="manifest" href="/site.webmanifest" />
         <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
         <meta name="msapplication-TileColor" content="#da532c" />
+        <link rel="stylesheet" type="text/css" charset="UTF-8" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" />
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />
         <meta name="theme-color" content="#ffffff" />
       </Head>
       <h1>Home</h1>
-
+      <div className={ styles['carousel-header']}>
+        <div className={styles['carousel-header__wrapper']}>
+          <div className={styles['carousel-header__text']}></div>
+          <div className={styles['carousel-header__visuals']}></div>
+        </div>
+        <Carousel />
+      </div>
       {/* display all three projects */}
 
       {/* display shots */}
