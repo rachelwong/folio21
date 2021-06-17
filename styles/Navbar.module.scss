@@ -1,0 +1,62 @@
+@use './mixins.scss';
+@import './mixins.scss';
+
+.header {
+  background: pink;
+  width: 100%;
+  position:relative;
+  top: 0;
+  flex: 0 0 auto;
+}
+
+.nav{
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 120rem;
+  width: 90%;
+  margin: 0 auto;
+  padding: 2rem 0;
+  font-family: var(--SpaceGrotesk);
+}
+
+.nav-homelink {
+  width: 4.8rem;
+  height: 4.8rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.nav-homelink__wrapper img {
+  display:block;
+  width: 100%;
+  height: 100%;
+}
+
+.nav-homelink__label {
+  font-weight: 900;
+  font-family: var(--SpaceGrotesk);
+}
+
+.nav-list {
+  list-style: none;
+  display:flex;
+  align-items: center;
+  font-size: 1.7rem;
+}
+
+.nav-list-item {
+  margin-left: 2rem;
+  cursor:pointer;
+  position:relative;
+}
+
+.nav-list-item:after {
+  before: '';
+  position:absolute;
+  display:block;
+}
+
+.nav-list-item__num {
+  margin-right: .5rem;
+}

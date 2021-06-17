@@ -19,6 +19,7 @@ export const getStaticProps = async () => {
 }
 
 const blog = ({ posts }) => {
+  blog.layout = "bloglayout"
   if (posts.length == 0) { return "" }
   return (
     <div>
