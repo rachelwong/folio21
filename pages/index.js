@@ -1,6 +1,12 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.scss'
 import Carousel from '../components/Carousel'
+import DummyImage from '../public/footer-image.png'
+import Image from 'next/image'
+import Link from 'next/link'
+import LinkedoutImage from '../public/linkedout.png'
+import PrelovedImage from '../public/preloved.png'
+
 export default function Home() {
 
   return (
@@ -19,15 +25,42 @@ export default function Home() {
         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />
         <meta name="theme-color" content="#ffffff" />
       </Head>
-      <h1>Home</h1>
-      <div className={ styles['carousel-header']}>
-        <div className={styles['carousel-header__wrapper']}>
-          <div className={styles['carousel-header__text']}></div>
-          <div className={styles['carousel-header__visuals']}></div>
+      <div className={ styles['home-header']}>
+        <div className={styles['home-header__wrapper']}>
+          <div className={styles['home-header__text']}>
+            <div className={ styles['home-header__text-wrapper']}>
+              <p>Hi👋 line one goes here</p>
+              <p>Line two goes here</p>
+              <p>Line three goes here and maybe longer</p>
+            </div>
+          </div>
+          <div className={styles['home-header__visuals']}>
+            <Image src={DummyImage} width={230} height={300} />
+          </div>
         </div>
         <Carousel />
       </div>
-      {/* display all three projects */}
+
+      <div className={styles.projects}>
+        <div className={styles['project-row']}>
+          <div className={styles['project-imagewrapper']}>
+            <Image src={ PrelovedImage} width={500} height={310} />
+          </div>
+          <div className={styles['project-textwrapper']}>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vehicula quis risus ut pharetra. Vivamus scelerisque lacus sed nibh venenatis viverra.</p>
+            <ul className={styles['project-tags']}>
+              <li>MongoDB</li>
+              <li>React</li>
+              <li>NodeJS</li>
+              <li>CSS3/HTML5</li>
+            </ul>
+            <div className={styles['project-actions']}>
+              <Link href="/" className="project-actions__repolink">See Repo</Link>
+              <Link href="/" className="project-actions__livelink">Go Live</Link>
+            </div>
+          </div>
+        </div>
+      </div>
 
       {/* display shots */}
 

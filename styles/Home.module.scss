@@ -4,13 +4,128 @@
 .container {
   flex: 1 1 auto; /* push footer down to bottom no matter what happens */
   position:relative;
+  top: -11.5rem;
 }
 
-.carousel-header {
+.home-header {
   position:relative;
+  top: 0;
 }
 
-.carousel-header__wrapper {
+
+.home-header__wrapper {
   position:absolute;
   z-index: 1;
+  height: 100vh;
+  width: 90%;
+  display:flex;
+  justify-content: space-between;
+  transform: translateX(-50%);
+  left: 50%;
+  max-width: 120rem;
+
 }
+
+.home-header__text {
+  flex: 1 1 66.666%;
+  flex-basis: 66.666%;
+  max-width: 66.666%;
+
+  display:flex;
+  align-items: center;
+
+  font-size: 6rem;
+  font-family: var(--SpaceGrotesk);
+  font-weight: 900;
+}
+
+.home-header__visuals {
+  flex: 1 1 33.333%;
+  flex-basis: 33.333%;
+  max-width: 33.333%;
+
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+.home-header-btn {}
+
+.home-header-arrow1 {
+    position:absolute;
+  top:0;
+  width: 4rem;
+  height: 4rem;
+  opacity:0;
+  transform: scale3d(.5, .5, .5);
+  animation: 3000ms ease-out 1000ms infinite normal none running move;
+
+}
+
+.home-header-arrow2 {
+  position:absolute;
+  top:0;
+  width: 4rem;
+  height: 4rem;
+  opacity:0;
+  transform: scale3d(.5, .5, .5);
+  animation: 3000ms ease-out 2000ms infinite normal none running move;
+
+}
+
+.home-header-arrow3 {
+  position:absolute;
+  top:0;
+  width: 4rem;
+  height: 4rem;
+  opacity:0;
+  transform: scale3d(.5, .5, .5);
+  animation: 3000ms ease-out 3000ms infinite normal none running move;
+}
+
+.projects {
+  padding: 3rem 0;
+}
+
+.project-row {
+  max-width: 120rem;
+  width: 90%;
+  margin: 0 auto;
+  position: relative;
+
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.project-imagewrapper {
+  flex-basis: 50%;
+  flex: 1 0 auto;
+}
+.project-textwrapper {
+  display:flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  flex-basis: 50%;
+  max-width: 50%;
+  font-size: 1.6rem;
+  line-height: 1.8;
+}
+
+.project-tags {
+  list-style: none;
+  display:flex;
+  font-size: 1.2rem;
+}
+
+.project-tags li {
+  padding: .4rem .9rem;
+  background: grey;
+  border-radius: 2.6rem;
+  border: 2px solid black;
+}
+
+.project-actions {}
+
+.project-actions__repolink {}
+
+.project-actions__livelink {}

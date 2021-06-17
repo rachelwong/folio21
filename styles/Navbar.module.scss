@@ -2,11 +2,11 @@
 @import './mixins.scss';
 
 .header {
-  background: pink;
   width: 100%;
   position:relative;
   top: 0;
   flex: 0 0 auto;
+  z-index: 10;
 }
 
 .nav{
@@ -20,22 +20,18 @@
   font-family: var(--SpaceGrotesk);
 }
 
-.nav-homelink {
-  width: 4.8rem;
-  height: 4.8rem;
-  border-radius: 50%;
-  overflow: hidden;
-}
 
-.nav-homelink__wrapper img {
-  display:block;
-  width: 100%;
-  height: 100%;
+.nav-homelink__wrapper {
+  display:flex !important;
+  align-items: center !important;
 }
 
 .nav-homelink__label {
   font-weight: 900;
+  font-size: 1.7rem;
+  line-height: 1;
   font-family: var(--SpaceGrotesk);
+  margin-left: 2rem;
 }
 
 .nav-list {
