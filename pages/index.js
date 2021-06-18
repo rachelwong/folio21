@@ -9,6 +9,7 @@ import { createClient } from 'contentful'
 import Shot from '../components/Shot'
 import styles from '../styles/Home.module.scss'
 import Plus from '../public/plus-solid.svg'
+import Slider from "react-slick";
 
 export const getStaticProps = async () => {
   const client = createClient({
@@ -26,7 +27,6 @@ export const getStaticProps = async () => {
 }
 
 export default function Home({ shots }) {
-
   if (!shots.length) return ""
   return (
     <div className={styles.container}>

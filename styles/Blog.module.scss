@@ -10,14 +10,17 @@
 .blog-banner {
   position:absolute;
   top: 0;
-  height: 50rem;
-  background-color: grey;
+  height: 40rem;
   width: 100%;
+  overflow: hidden;
+  z-index: -1;
 }
 
 .blog-banner__content {
   text-align: center;
-  margin: 20rem auto;
+  z-index: 1;
+  position:relative;
+  margin-top: -25rem;
 }
 
 .blog-banner__title {
@@ -26,7 +29,7 @@
 }
 
 .blog-banner__blurb {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   line-height: 1.3;
 
   .blog-banner__title + & {
@@ -42,4 +45,30 @@
   margin: 0 auto;
   margin-top: 30rem;
   background: white;
+}
+
+.blog-slide1,
+.blog-slide2,
+.blog-slide3 {
+  display:block;
+  width: 100%;
+  height: 40rem;
+}
+
+.blog-slide1{
+  background: linear-gradient(90deg, rgba(255, 174, 174, 0.5), #d2c3ff) !important;
+}
+.blog-slide2{
+  background: linear-gradient(90deg, rgba(255, 205, 55, 0.59), rgba(221, 149, 126, 0.5))
+ !important;
+}
+.blog-slide3{
+  background: linear-gradient(90deg, #acffff, #9d9ad5) !important;
+}
+
+.blog-container__inner {
+  margin: 0 auto;
+  max-width: 70rem;
+  width: 100%;
+  padding: 5rem 0 ;
 }

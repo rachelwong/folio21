@@ -1,6 +1,9 @@
 import { createClient} from 'contentful';
 import PostEntry from '../components/PostEntry'
 import styles from '../styles/Blog.module.scss'
+import Slider from 'react-slick'
+import "../node_modules/slick-carousel/slick/slick-theme.css"
+import "../node_modules/slick-carousel/slick/slick.css"
 
 // initialise connection with contentful backend
 export const getStaticProps = async () => {
@@ -20,14 +23,31 @@ export const getStaticProps = async () => {
 }
 
 const blog = ({ posts }) => {
-  blog.layout = "bloglayout"
+
+  const settings = {
+    dots: false,
+    fade: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    pauseOnHover: false, /* must have this for fade to work */
+  };
+
   if (posts.length == 0) { return "" }
+
   return (
     <div className={styles['blog-wrapper']}>
       <div className={styles['blog-banner']}>
+        <Slider {...settings} className={['blog-banner-slider']}>
+          <div className={styles['blog-slide1']} id="slide1"></div>
+          <div className={styles['blog-slide2']} id="slide2"></div>
+          <div className={styles['blog-slide3']} id="slide3"></div>
+        </Slider>
         <div className={styles['blog-banner__content']}>
-          <h3 className={styles['blog-banner__title']}>Blog</h3>
-          <p className={ styles['blog-banner__blurb']}>Less of a diary, more a mish-mash collection of learning notes and post mortem on projects.</p>
+          <h3 className={styles['blog-banner__title']}>Thoughts & Writings</h3>
+          <p className={ styles['blog-banner__blurb']}>A mish-mash collection of learning notes and project post-mortems.</p>
         </div>
       </div>
       <div className={styles['blog-container']}>

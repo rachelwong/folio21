@@ -23,7 +23,7 @@ const Navbar = () => {
               </Link>
             </li>
             <li className={styles['nav-list-item']}>
-              <Link href="blog">
+              <Link href="/blog">
                 <a>
             <span className={styles['nav-list-item__num']} aria-hidden="true">02</span>
                 Blog</a>

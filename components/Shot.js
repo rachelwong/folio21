@@ -21,7 +21,7 @@ const Shot = ({ shot }) => {
           </h4>
               <ul className={ styles['shot-tags']}>
                 {tags.length > 0 && tags.map((tag, tagIndex) => (
-                  <li>{ tag }</li>
+                  <li key={ tagIndex }>{ tag }</li>
                 ))}
               </ul>
             <p className={styles['shot-summary']}>{description}</p>
