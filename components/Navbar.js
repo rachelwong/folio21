@@ -23,31 +23,26 @@ const Navbar = () => {
               </Link>
             </li>
             <li className={styles['nav-list-item']}>
-              <Link href="#projects">
+              <Link href="blog">
                 <a>
             <span className={styles['nav-list-item__num']} aria-hidden="true">02</span>
-                Projects</a>
+                Blog</a>
               </Link>
             </li>
             <li className={styles['nav-list-item']}>
-              <Link href="blog">
+              <Link href="http://www.bitbucket.com/rachel-wong">
                 <a>
             <span className={styles['nav-list-item__num']} aria-hidden="true">03</span>
-                Blog</a>
-            </Link></li>
-            <li className={styles['nav-list-item']}>
-              <Link href="#shots">
-                <a>
-            <span className={styles['nav-list-item__num']} aria-hidden="true">04</span>
-                Shots
+                Bitbucket
                 </a>
               </Link>
             </li>
             <li className={styles['nav-list-item']}>
-              <Link href="#contact">
+              <Link href="http://www.linkedin.com/in/rachwong">
                 <a>
-            <span className={styles['nav-list-item__num']} aria-hidden="true">05</span>
-                Contact</a>
+            <span className={styles['nav-list-item__num']} aria-hidden="true">04</span>
+                Contact
+                </a>
               </Link>
             </li>
         </ul>

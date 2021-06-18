@@ -24,6 +24,10 @@
 .nav-homelink__wrapper {
   display:flex;
   align-items: center;
+
+  &:hover, &:focus {
+    cursor:pointer;
+  }
 }
 
 .nav-homelink__label {

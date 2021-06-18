@@ -96,10 +96,22 @@ export const getStaticProps = async ({ params }) => {
       revalidate: 1
     }
   }
+
+  if (!items.length) {
+    return {
+      redirect: {
+        destination: '/',
+        permanent: false // not permanent in the sense that the slug might be used by future content so it should behave normally then
+      }
+    }
+  }
+
 }
 
 const Post = ({ post }) => {
-  console.log("post", post)
+
+    if (!post) return "" // error handling when new content is not available
+
   const {
     featureImage, mainText, title, slug, publishedDate
   } = post.fields

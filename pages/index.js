@@ -26,6 +26,8 @@ export const getStaticProps = async () => {
 }
 
 export default function Home({ shots }) {
+
+  if (!shots.length) return ""
   return (
     <div className={styles.container}>
       <Head>

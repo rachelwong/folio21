@@ -25,23 +25,20 @@ const Footer = () => {
                   <Link href="/">Home</Link>
                 </li>
                 <li>
-                  <Link href="/">Projects</Link>
+                  <Link href="/blog">Blog</Link>
                 </li>
                 <li>
-                  <Link href="/">Blog</Link>
+                  <Link href="http://www.bitbucket.com/rachel-wong">Bitbucket</Link>
                 </li>
                 <li>
-                  <Link href="/">Shots</Link>
-                </li>
-                <li>
-                  <Link href="/">Contact</Link>
+                  <Link href="http://www.bitbucket.com/rachel-wong">Contact</Link>
                 </li>
               </ul>
             </nav>
             <nav className={styles['footer-social-nav']}>
             <ul className={styles['footer-social-nav__list']}>
               <li>
-                <Link href="/">
+                <Link href="http://www.github.com/rachelwong">
                   <a className={ styles['footer-social-nav__list__link']}>
                     <Image src={GithubIcon} width={20} height={ 20}/>
                     <span className="sr-only">Github account</span>
@@ -49,7 +46,7 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link href="/">
+                <Link href="http://www.instagram.com/itsonlyher">
                   <a className={ styles['footer-social-nav__list__link']}>
                     <Image src={InstagramIcon} width={20} height={ 20}/>
                     <span className="sr-only">Instagram</span>
@@ -57,23 +54,15 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link href="/">
+                <Link href="http://www.linkedin.com/in/rachwong">
                   <a className={ styles['footer-social-nav__list__link']}>
                     <Image src={LinkedinIcon} width={20} height={ 20}/>
                     <span className="sr-only">Linkedin</span>
                   </a>
                 </Link>
               </li>
-              <li>
-                <Link href="/">
-                  <a className={ styles['footer-social-nav__list__link']}>
-                    <Image src={EmailIcon} width={20} height={ 20}/>
-                    <span className="sr-only">Email</span>
-                  </a>
-                </Link>
-              </li>
             </ul>
-              <small className={ styles['footer-copyright']}> Rachel Wong (c) 2021</small>
+              <small className={ styles['footer-copyright']}> Made with NextJS x Contentful | Rachel Wong © 2021</small>
             </nav>
           </div>
         </div>
