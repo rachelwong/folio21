@@ -1,10 +1,12 @@
 import { createClient } from 'contentful'
-import Link from 'next/link'
-import Image from 'next/image'
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
-import { BLOCKS, INLINES } from "@contentful/rich-text-types";
-
-import Head from 'next/head'
+import { BLOCKS, INLINES, MARKS } from "@contentful/rich-text-types";
+import styles from '../../styles/Post.module.scss'
+import Slider from 'react-slick'
+import "../../node_modules/slick-carousel/slick/slick.css"
+import "../../node_modules/slick-carousel/slick/slick-theme.css"
+import SyntaxHighlighter from "react-syntax-highlighter";
+import { docco } from 'react-syntax-highlighter/dist/cjs/styles/hljs';
 
 // Initialise connection with contentful server
 const client = createClient({
@@ -31,9 +33,9 @@ const renderOptions = {
       // target the contentType of the EMBEDDED_ENTRY to display as you need
       if (node.data.target.sys.contentType.sys.id === "codeBlock") {
         return (
-          <pre>
-            <code>{node.data.target.fields.code}</code>
-          </pre>
+            <pre>
+              <code>{node.data.target.fields.code}</code>
+            </pre>
         );
       }
 
@@ -62,7 +64,21 @@ const renderOptions = {
         />
       );
     },
+    [BLOCKS.PARAGRAPH]: (node, children) => {
+      if (node.content.length === 1 && node.content[0].marks.find((x) => x.type === "code")) {
+        return <pre>{children}</pre>
+      }
+      return <p>{ children }</p>
+    }
   },
+  renderMark: {
+    [MARKS.CODE]: (text) => {
+      console.log('text:', text)
+      return (
+        <SyntaxHighlighter language="javascript" style={docco}>{ text}</SyntaxHighlighter>
+      )
+    }
+  }
 };
 
 // get full list of possible slug paths (links)
@@ -110,27 +126,43 @@ export const getStaticProps = async ({ params }) => {
 
 const Post = ({ post }) => {
 
-    if (!post) return "" // error handling when new content is not available
+  if (!post) return "" // error handling when new content is not available
+
+  const settings = {
+    dots: false,
+    fade: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    pauseOnHover: false, /* must have this for fade to work */
+  };
 
   const {
-    featureImage, mainText, title, slug, publishedDate
+    mainText, title, publishedDate, tags
   } = post.fields
 
   return (
-    <div>
-      <h1>Blog post entry</h1>
-      <h2>Title: { title }</h2>
-      <Image
-        src={'https:' + featureImage.fields.file.url}
-        width={featureImage.fields.file.details.image.width}
-        height={featureImage.fields.file.details.image.height}
-        alt={title}
-      />
-      <div className="post-mainText">
-        { documentToReactComponents(mainText,renderOptions)}
+    <div className={styles['post-wrapper']}>
+      <div className={styles['post-banner']}>
+        <Slider {...settings} className={['post-banner-slider']}>
+          <div className={styles['post-slide1']} id="slide1"></div>
+          <div className={styles['post-slide2']} id="slide2"></div>
+          <div className={styles['post-slide3']} id="slide3"></div>
+        </Slider>
+        <div className={styles['post-banner__content']}>
+          <time className={styles['post-banner__date']}>{ publishedDate}</time>
+          <h3 className={styles['post-banner__title']}>{ title }</h3>
+        </div>
+      </div>
+      <div className={styles['post-container']}>
+        <div className={ styles['post-container__inner']}>
+          { documentToReactComponents(mainText,renderOptions)}
+        </div>
       </div>
     </div>
-  )
+    )
 }
 
 export default Post
