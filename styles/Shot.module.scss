@@ -8,6 +8,9 @@
   position: relative;
   box-shadow: 0px 3px 4px -1px rgba(0,0,0,0.5);
   text-align: left;
+  transform: translateY(0);
+  transition: transform 0.3 ease-out;
+
   &:before {
     content: '';
     position:absolute;
@@ -15,30 +18,36 @@
     display:block;
     height: 1rem;
   }
-}
 
-.shot-wrapper:nth-child(1):before {
-  background: #acffff;
-}
+  &:hover,
+  &:focus {
+    transform: translateY(-.2rem);
+    cursor:pointer;
+  }
 
-.shot-wrapper:nth-child(2):before {
-  background: #9d9ad5;
-}
+  &:nth-child(1):before {
+    background: #acffff;
+  }
 
-.shot-wrapper:nth-child(3):before {
-  background:#d2c3ff;
-}
+  &:nth-child(2):before {
+    background: #9d9ad5;
+  }
 
-.shot-wrapper:nth-child(4):before {
-  background:rgba(255, 174, 174, 0.5);
-}
+  &:nth-child(3):before {
+    background:#d2c3ff;
+  }
 
-.shot-wrapper:nth-child(5):before {
-  background:rgba(255, 205, 55, 0.59);
-}
+  &:nth-child(4):before {
+    background:rgba(255, 174, 174, 0.5);
+  }
 
-.shot-wrapper:nth-child(6):before {
-  background:rgba(221, 149, 126, 0.5);
+  &:nth-child(5):before {
+    background:rgba(255, 205, 55, 0.59);
+  }
+
+  &:nth-child(6):before {
+    background:rgba(221, 149, 126, 0.5);
+  }
 }
 
 .shot-link {
@@ -54,6 +63,19 @@
 .shot-title {
   margin-top: 2rem;
   font-size: 2rem;
+  display:flex;
+  align-items: center;
+}
+
+.shot-title__arrow {
+  margin-left: .5rem;
+  transform: translateX(0);
+  transition: transform 0.3s ease-out;
+  opacity: .5;
+  .shot-wrapper:hover &,
+  .shot-wrapper:focus & {
+    transform: translateX(.8rem);
+  }
 }
 
 .shot-tags {
@@ -61,12 +83,26 @@
   font-size: 1.2rem;
   display:flex;
   align-items: center;
+  margin-left: -.5rem;
+  margin-right: -.5rem;
+  padding: 1rem 0;
 }
 
 .shot-tags li {
   padding: .5rem 1.2rem;
   border-radius: 3rem;
-  border: 1px solid black;
+  border: 1px solid #dbe3ea;
+  color: #8d9ca8;
+  margin: 0 .5rem;
+  background-color: transparent;
+  transition: color 0.3s ease-out, background-color 0.3 ease-out;
+  font-weight: 500;
+  &:hover,
+  &:focus {
+    border: 1px solid #dbe3ea;
+    background-color: #dbe3ea;
+    color: #4d575e;
+  }
 }
 
 .shot-summary {
@@ -81,4 +117,30 @@
   background: white;
   display:block;
   margin-top: auto;
+}
+
+.shot-svg {
+  position:absolute;
+  z-index: -1;
+  opacity: .05;
+  right: -5rem;
+  top: 1rem;
+  transform-origin: 1.5rem;
+
+  .shot-wrapper:hover &,
+  .shot-wrapper:focus & {
+    animation: rotateCog 2s linear infinite;
+  }
+}
+
+@keyframes rotateCog {
+  from {
+  transform-origin: center;
+    transform: rotate(0deg);
+  }
+  to {
+  transform-origin: center;
+
+    transform: rotate(360deg);
+  }
 }

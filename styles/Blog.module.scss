@@ -1,0 +1,45 @@
+@use './mixins.scss';
+@import './mixins.scss';
+
+.blog-wrapper {
+  flex: 1 1 auto; /* push footer down to bottom no matter what happens */
+  position:relative;
+  margin-top: -8.9rem;
+}
+
+.blog-banner {
+  position:absolute;
+  top: 0;
+  height: 50rem;
+  background-color: grey;
+  width: 100%;
+}
+
+.blog-banner__content {
+  text-align: center;
+  margin: 20rem auto;
+}
+
+.blog-banner__title {
+  font-size: 5rem;
+  font-family: var(--SpaceGrotesk);
+}
+
+.blog-banner__blurb {
+  font-size: 1.5rem;
+  line-height: 1.3;
+
+  .blog-banner__title + & {
+    margin-top: 1rem;
+  }
+}
+
+.blog-container {
+  flex: 1 1 auto; /* push footer down to bottom no matter what happens */
+  position:relative;
+  max-width: 120rem;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 30rem;
+  background: white;
+}
