@@ -16,21 +16,40 @@ const Navbar = () => {
           </div>
         </Link>
         <ul className={styles['nav-list']}>
-          <li className={styles['nav-list-item']}>
+            <li className={styles['nav-list-item']}>
+              <Link href="/"><a>
             <span className={styles['nav-list-item__num']} aria-hidden="true">01</span>
-            Home</li>
-          <li className={styles['nav-list-item']}>
+                Home</a>
+              </Link>
+            </li>
+            <li className={styles['nav-list-item']}>
+              <Link href="#projects">
+                <a>
             <span className={styles['nav-list-item__num']} aria-hidden="true">02</span>
-            Projects</li>
-          <li className={styles['nav-list-item']}>
+                Projects</a>
+              </Link>
+            </li>
+            <li className={styles['nav-list-item']}>
+              <Link href="blog">
+                <a>
             <span className={styles['nav-list-item__num']} aria-hidden="true">03</span>
-            Blog</li>
-          <li className={styles['nav-list-item']}>
+                Blog</a>
+            </Link></li>
+            <li className={styles['nav-list-item']}>
+              <Link href="#shots">
+                <a>
             <span className={styles['nav-list-item__num']} aria-hidden="true">04</span>
-            Shots</li>
-          <li className={styles['nav-list-item']}>
+                Shots
+                </a>
+              </Link>
+            </li>
+            <li className={styles['nav-list-item']}>
+              <Link href="#contact">
+                <a>
             <span className={styles['nav-list-item__num']} aria-hidden="true">05</span>
-            Contact</li>
+                Contact</a>
+              </Link>
+            </li>
         </ul>
         </nav>
       </div>

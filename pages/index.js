@@ -8,6 +8,7 @@ import PrelovedImage from '../public/preloved.png'
 import { createClient } from 'contentful'
 import Shot from '../components/Shot'
 import styles from '../styles/Home.module.scss'
+import Plus from '../public/plus-solid.svg'
 
 export const getStaticProps = async () => {
   const client = createClient({
@@ -63,39 +64,85 @@ export default function Home({ shots }) {
         </div>
         <div className={styles['project-row']}>
           <div className={styles['project-imagewrapper']}>
-            <Image src={ PrelovedImage} width={500} height={310} />
+            <Image src={ PrelovedImage} width={500} height={310} className={styles['project-image']} />
           </div>
           <div className={styles['project-textwrapper']}>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vehicula quis risus ut pharetra. Vivamus scelerisque lacus sed nibh venenatis viverra.</p>
+          <div className={styles['project-textwrapper__inner']}>
+            <h3>Preloved</h3>
             <ul className={styles['project-tags']}>
-              <li>MongoDB</li>
-              <li>React</li>
-              <li>NodeJS</li>
-              <li>CSS3/HTML5</li>
+              <li>
+              <span className={styles['project-tags__plus']}>
+                <Image src={Plus} width={10} height={10} alt={"Techstack"}/>
+              </span>
+              <span>Ruby</span>
+              </li>
+                <li>
+                  <span className={styles['project-tags__plus']}>
+                <Image src={Plus} width={10} height={10} alt={"Techstack"}/>
+              </span>
+              <span>Rails</span></li>
+              <li>
+                <span className={styles['project-tags__plus']}>
+                <Image src={Plus} width={10} height={10} alt={"Techstack"}/>
+              </span>
+              <span>HTML5/CSS3</span></li>
+                <li>
+                  <span className={styles['project-tags__plus']}>
+                <Image src={Plus} width={10} height={10} alt={"Techstack"}/>
+              </span>
+              <span>Bootstrap</span></li>
             </ul>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vehicula quis risus ut pharetra. Vivamus scelerisque lacus sed nibh venenatis viverra.</p>
             <div className={styles['project-actions']}>
-              <Link href="/" className="project-actions__repolink">See Repo</Link>
-              <Link href="/" className="project-actions__livelink">Go Live</Link>
+                <Link href="/">
+                  <a className={styles['project-actions__repolink']}> <span>See Source Code</span></a></Link>
+                <Link href="/">
+                  <a className={styles['project-actions__livelink']}><span>Go Live</span></a></Link>
             </div>
+          </div>
           </div>
         </div>
         <div className={styles['project-row']}>
           <div className={styles['project-textwrapper']}>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vehicula quis risus ut pharetra. Vivamus scelerisque lacus sed nibh venenatis viverra.</p>
-            <ul className={styles['project-tags']}>
-              <li>MongoDB</li>
-              <li>React</li>
-              <li>NodeJS</li>
-              <li>CSS3/HTML5</li>
-            </ul>
+            <div className={styles['project-textwrapper__inner']}>
+              <h3>LinkedOut</h3>
+              <ul className={styles['project-tags']}>
+                <li>
+                <span className={styles['project-tags__plus']}>
+                  <Image src={Plus} width={10} height={10} alt={"Techstack"} />
+                </span>
+                <span>MongoDB</span></li>
+                <li>              <span className={styles['project-tags__plus']}>
+                  <Image src={Plus} width={10} height={10} alt={"Techstack"}/>
+                </span>
+                <span>ExpressJS</span></li>
+                <li>              <span className={styles['project-tags__plus']}>
+                  <Image src={Plus} width={10} height={10} alt={"Techstack"}/>
+                </span>
+                <span>React</span></li>
+                <li>              <span className={styles['project-tags__plus']}>
+                  <Image src={Plus} width={10} height={10} alt={"Techstack"}/>
+                </span>
+                <span>NodeJS</span></li>
+                <li>
+                <span className={styles['project-tags__plus']}>
+                  <Image src={Plus} width={10} height={10} alt={"Techstack"}/>
+                </span>
+                <span>CSS3/HTML5</span></li>
+              </ul>
+
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vehicula quis risus ut pharetra. Vivamus scelerisque lacus sed nibh venenatis viverra.</p>
             <div className={styles['project-actions']}>
-              <Link href="/" className="project-actions__repolink">See Repo</Link>
-              <Link href="/" className="project-actions__livelink">Go Live</Link>
+                <Link href="/">
+                  <a className={styles['project-actions__repolink']}> <span>See Source Code</span></a></Link>
+                <Link href="/">
+                  <a className={styles['project-actions__livelink']}><span>Go Live</span></a></Link>
+            </div>
             </div>
           </div>
 
           <div className={styles['project-imagewrapper']}>
-            <Image src={ LinkedoutImage } width={500} height={280} />
+            <Image src={LinkedoutImage} width={500} height={280} className={styles['project-image']} alt={ "Linkedout "}/>
           </div>
         </div>
       </div>
