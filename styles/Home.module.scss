@@ -211,7 +211,8 @@
     margin-left: 2.5rem;
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     color: white;
     box-shadow:  inset 300px 0 0 0 black;
   }
