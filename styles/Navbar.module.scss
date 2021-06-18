@@ -22,16 +22,23 @@
 
 
 .nav-homelink__wrapper {
-  display:flex !important;
-  align-items: center !important;
+  display:flex;
+  align-items: center;
 }
 
 .nav-homelink__label {
   font-weight: 900;
-  font-size: 1.7rem;
+  font-size: 2rem;
   line-height: 1;
   font-family: var(--SpaceGrotesk);
-  margin-left: 2rem;
+  margin-left: 2.5rem;
+  font-weight: 700;
+
+  background-image: linear-gradient(to bottom, lightseagreen, lightseagreen);
+  background-size: 80% .8rem;
+  background-position: 90% 100%, 0 90%;
+  background-repeat: no-repeat;
+
 }
 
 .nav-list {

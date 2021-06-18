@@ -1,14 +1,30 @@
 import Head from 'next/head'
-import styles from '../styles/Home.module.scss'
 import Carousel from '../components/Carousel'
-import DummyImage from '../public/footer-image.png'
 import Image from 'next/image'
 import Link from 'next/link'
+import DummyImage from '../public/footer-image.png'
 import LinkedoutImage from '../public/linkedout.png'
 import PrelovedImage from '../public/preloved.png'
+import { createClient } from 'contentful'
+import Shot from '../components/Shot'
+import styles from '../styles/Home.module.scss'
 
-export default function Home() {
+export const getStaticProps = async () => {
+  const client = createClient({
+    space: process.env.NEXT_CONTENTFUL_SPACE_ID,
+    accessToken: process.env.NEXT_CONTENTFUL_CDN_API
+  })
+  const res = await client.getEntries({ content_type: 'shot' })
 
+  return {
+    props: {
+      shots: res.items,
+    },
+    revalidate: 1
+  }
+}
+
+export default function Home({ shots }) {
   return (
     <div className={styles.container}>
       <Head>
@@ -42,6 +58,9 @@ export default function Home() {
       </div>
 
       <div className={styles.projects}>
+        <div className={styles['projects-description']}>
+          <h3 id="#projects">Projects</h3>
+        </div>
         <div className={styles['project-row']}>
           <div className={styles['project-imagewrapper']}>
             <Image src={ PrelovedImage} width={500} height={310} />
@@ -81,7 +100,17 @@ export default function Home() {
         </div>
       </div>
 
-      {/* display shots */}
+      <div className={styles['shots-container']}>
+        <div className={styles['shots-summary']}>
+          <h3 id="#shots">Practice Shots</h3>
+          <p>I learn by making incremental steps, these are some of my smaller projects to help me build a solid foundation understanding of code flow, fundamental concepts and problem solving. </p>
+        </div>
+        <div className={styles['shots-wrapper']}>
+          {shots.length > 0 && shots.map((shot, shotIndex) => (
+            <Shot shot={shot} key={ shotIndex}/>
+          ))}
+        </div>
+      </div>
 
     </div>
   )

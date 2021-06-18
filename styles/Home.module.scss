@@ -4,7 +4,7 @@
 .container {
   flex: 1 1 auto; /* push footer down to bottom no matter what happens */
   position:relative;
-  top: -11.5rem;
+  margin-top: -8.8rem;
 }
 
 .home-header {
@@ -36,7 +36,7 @@
 
   font-size: 6rem;
   font-family: var(--SpaceGrotesk);
-  font-weight: 900;
+  font-weight: 500;
 }
 
 .home-header__visuals {
@@ -48,44 +48,26 @@
   justify-content: center;
   align-items: center;
 }
+
 .home-header-btn {}
-
-.home-header-arrow1 {
-    position:absolute;
-  top:0;
-  width: 4rem;
-  height: 4rem;
-  opacity:0;
-  transform: scale3d(.5, .5, .5);
-  animation: 3000ms ease-out 1000ms infinite normal none running move;
-
-}
-
-.home-header-arrow2 {
-  position:absolute;
-  top:0;
-  width: 4rem;
-  height: 4rem;
-  opacity:0;
-  transform: scale3d(.5, .5, .5);
-  animation: 3000ms ease-out 2000ms infinite normal none running move;
-
-}
-
-.home-header-arrow3 {
-  position:absolute;
-  top:0;
-  width: 4rem;
-  height: 4rem;
-  opacity:0;
-  transform: scale3d(.5, .5, .5);
-  animation: 3000ms ease-out 3000ms infinite normal none running move;
-}
 
 .projects {
   padding: 3rem 0;
 }
 
+.projects-description {
+  display:flex;
+  justify-content: center;
+
+  h3 {
+    font-family: var(--SpaceGrotesk);
+    font-size: 4rem;
+    background-image: linear-gradient(to bottom, lightseagreen, lightseagreen);
+    background-size: 80% 2rem;
+    background-position: 90% 90%, 0 90%;
+    background-repeat: no-repeat;
+  }
+}
 .project-row {
   max-width: 120rem;
   width: 90%;
@@ -129,3 +111,39 @@
 .project-actions__repolink {}
 
 .project-actions__livelink {}
+
+.shots-container {
+  margin: 0 auto;
+  max-width: 90rem;
+  width: 90%;
+  text-align: center;
+  padding: 5rem 0;
+}
+
+.shots-summary {
+  font-size: 1.6rem;
+  line-height: 1.5;
+  max-width: 60rem;
+  margin: 0 auto;
+}
+
+.shots-summary h3 {
+  display:block;
+  font-family: var(--SpaceGrotesk);
+  font-size: 4rem;
+  background-image: linear-gradient(to bottom, lightseagreen, lightseagreen);
+  background-size: 40% 2rem;
+  background-position: 60% 90%, 0 90%;
+  background-repeat: no-repeat;
+}
+
+.shots-summary p {
+  margin-top: 3rem;
+}
+
+.shots-wrapper {
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  padding: 3rem 0 5rem;
+}
