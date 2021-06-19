@@ -253,3 +253,16 @@
   gap: 4rem;
   padding: 3rem 0 5rem;
 }
+
+.home-header__text__line {
+  height: 8rem;
+  width:100%;
+  display:block;
+  overflow: hidden;
+  background: grey;
+
+  &--lg {
+    height: 18rem;
+    background: white;
+  }
+}

@@ -10,6 +10,7 @@ import Shot from '../components/Shot'
 import styles from '../styles/Home.module.scss'
 import Plus from '../public/plus-solid.svg'
 import Slider from "react-slick";
+import { motion } from 'framer-motion';
 
 export const getStaticProps = async () => {
   const client = createClient({
@@ -27,6 +28,35 @@ export const getStaticProps = async () => {
 }
 
 export default function Home({ shots }) {
+
+  const titleLine1 = "Hi line one goes here"
+  const titleLine2 = "A second line goes here"
+
+  // variants for framer motion
+  const sentence = {
+    hidden: {
+      opacity: 1,
+    },
+    visible: {
+      transition: {
+        opacity: 1,
+        delay: .2,
+        staggerChildren: 0.08
+      }
+    }
+  }
+
+  const letter = {
+      hidden: {
+        opacity: 0,
+        // y: 100
+      },
+      visible: {
+        // y: 0,
+        opacity: 1,
+      }
+  }
+
   if (!shots.length) return ""
   return (
     <div className={styles.container}>
@@ -48,9 +78,31 @@ export default function Home({ shots }) {
         <div className={styles['home-header__wrapper']}>
           <div className={styles['home-header__text']}>
             <div className={ styles['home-header__text-wrapper']}>
-              <p>Hi👋 line one goes here</p>
-              <p>Line two goes here</p>
-              <p>Line three goes here and maybe longer</p>
+              <div className={styles['home-header__text__line']}>
+                <motion.div className={styles['home-header__text__line-inner']}
+                  initial="hidden"
+                  animate="visible"
+                  variants={sentence}>
+                  {titleLine1.split("").map((char, index) => {
+                    return (
+                      <motion.span key={char + "-" + index} variants={letter}>{ char }</motion.span>
+                    )
+                  })}
+                </motion.div>
+              </div>
+              <div className={styles['home-header__text__line']}>
+                <motion.div className={styles['home-header__text__line-inner']}
+                  transition={{ delay: 1 }}
+                  initial="hidden"
+                  animate="visible"
+                  variants={sentence}>
+                  {titleLine2.split("").map((char, index) => {
+                    return (
+                      <motion.span key={char + "-" + index} variants={letter}>{ char }</motion.span>
+                    )
+                  })}
+                </motion.div>
+              </div>
             </div>
           </div>
           <div className={styles['home-header__visuals']}>
