@@ -29,8 +29,8 @@ export const getStaticProps = async () => {
 
 export default function Home({ shots }) {
 
-  const titleLine1 = "Hi line one goes here"
-  const titleLine2 = "A second line goes here"
+  const titleLine1 = "Hi I'm Rachel. I like to build user interfaces and write for tech."
+  // const titleLine2 = "I like building UI and dabble in writing."
 
   // variants for framer motion
   const sentence = {
@@ -90,7 +90,8 @@ export default function Home({ shots }) {
                   })}
                 </motion.div>
               </div>
-              <div className={styles['home-header__text__line']}>
+              {/* TODO // this is not appearing after the first line  */}
+              {/* <div className={styles['home-header__text__line']}>
                 <motion.div className={styles['home-header__text__line-inner']}
                   transition={{ delay: 1 }}
                   initial="hidden"
@@ -102,7 +103,7 @@ export default function Home({ shots }) {
                     )
                   })}
                 </motion.div>
-              </div>
+              </div> */}
             </div>
           </div>
           <div className={styles['home-header__visuals']}>

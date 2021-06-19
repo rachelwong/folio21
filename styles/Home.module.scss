@@ -255,14 +255,11 @@
 }
 
 .home-header__text__line {
-  height: 8rem;
+  height: 26rem;
   width:100%;
   display:block;
   overflow: hidden;
-  background: grey;
-
-  &--lg {
-    height: 18rem;
-    background: white;
-  }
+  font-weight: 700;
+  letter-spacing: -.8px;
+  line-height: 1.2;
 }
