@@ -52,7 +52,9 @@ const blog = ({ posts }) => {
       </div>
       <div className={styles['blog-container']}>
         <div className={ styles['blog-container__inner']}>
-          {posts.length > 0 && posts.map((post, postIndex) => (
+          {posts.length > 0 && posts
+            .sort((a, b) => new Date(b.fields.publishedDate) - new Date(a.fields.publishedDate))
+            .map((post, postIndex) => (
             <PostEntry post={post} key={ postIndex} />
           ))}
         </div>

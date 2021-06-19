@@ -24,7 +24,8 @@ const renderOptions = {
       // target the contentType of the EMBEDDED_ENTRY to display as you need
       if (node.data.target.sys.contentType.sys.id === "blogPost") {
         return (
-          <a href={`/blog/${node.data.target.fields.slug}`}>            {node.data.target.fields.title}
+          <a href={`/blog/${node.data.target.fields.slug}`}>
+            {node.data.target.fields.title}
           </a>
         );
       }
@@ -33,9 +34,7 @@ const renderOptions = {
       // target the contentType of the EMBEDDED_ENTRY to display as you need
       if (node.data.target.sys.contentType.sys.id === "codeBlock") {
         return (
-            <pre>
-              <code>{node.data.target.fields.code}</code>
-            </pre>
+          <SyntaxHighlighter language={ node.data.target.fields.language } style={docco}>{ node.data.target.fields.code }</SyntaxHighlighter>
         );
       }
 
@@ -73,7 +72,6 @@ const renderOptions = {
   },
   renderMark: {
     [MARKS.CODE]: (text) => {
-      console.log('text:', text)
       return (
         <SyntaxHighlighter language="javascript" style={docco}>{ text}</SyntaxHighlighter>
       )
