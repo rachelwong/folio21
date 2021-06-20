@@ -1,7 +1,8 @@
-import '../styles/globals.scss'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import { motion } from 'framer-motion'
+import '../styles/globals.scss'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function MyApp({ Component, pageProps, router }) {
   return (

@@ -9,6 +9,10 @@
         @media(min-width:768px){@content;} //max 768px
     }
 
+    @if $breakpoint == tab-land{
+        @media(min-width:960px){@content;} //max 768px
+    }
+
     @if $breakpoint == desktop{
         @media(min-width:1200px){@content;} //max 1200px
     }

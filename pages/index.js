@@ -9,8 +9,21 @@ import { createClient } from 'contentful'
 import Shot from '../components/Shot'
 import styles from '../styles/Home.module.scss'
 import Plus from '../public/plus-solid.svg'
-import Slider from "react-slick";
+// import Slider from "react-slick";
+import MiniCarousel from '../components/MiniCarousel'
 import { motion } from 'framer-motion';
+import "../node_modules/slick-carousel/slick/slick-theme.css"
+import "../node_modules/slick-carousel/slick/slick.css"
+import Project1Image1 from '../public/Preloved1.png'
+import Project1Image2 from '../public/Preloved2.png'
+import Project1Image3 from '../public/Preloved3.png'
+import Project2Image1 from '../public/Linkedout1.png'
+import Project2Image2 from '../public/Linkedout2.png'
+import Project2Image3 from '../public/Linkedout3.png'
+import Container from 'react-bootstrap/Container';
+import Button from 'react-bootstrap/Button';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 export const getStaticProps = async () => {
   const client = createClient({
@@ -29,8 +42,9 @@ export const getStaticProps = async () => {
 
 export default function Home({ shots }) {
 
-  const titleLine1 = "Hi I'm Rachel. I like to build user interfaces and write for tech."
-  // const titleLine2 = "I like building UI and dabble in writing."
+  const titleLine1 = "Hello I'm Rachel."
+  const titleLine2 = "I am a front-end developer from Brisbane."
+  const titleLine3 = "I enjoy building interfaces and writing for tech."
 
   // variants for framer motion
   const sentence = {
@@ -90,20 +104,6 @@ export default function Home({ shots }) {
                   })}
                 </motion.div>
               </div>
-              {/* TODO // this is not appearing after the first line  */}
-              {/* <div className={styles['home-header__text__line']}>
-                <motion.div className={styles['home-header__text__line-inner']}
-                  transition={{ delay: 1 }}
-                  initial="hidden"
-                  animate="visible"
-                  variants={sentence}>
-                  {titleLine2.split("").map((char, index) => {
-                    return (
-                      <motion.span key={char + "-" + index} variants={letter}>{ char }</motion.span>
-                    )
-                  })}
-                </motion.div>
-              </div> */}
             </div>
           </div>
           <div className={styles['home-header__visuals']}>
@@ -113,94 +113,93 @@ export default function Home({ shots }) {
         <Carousel />
       </div>
 
-      <div className={styles.projects}>
-        <div className={styles['projects-description']}>
+        <Container className={styles.projects}>
+        <Row className={styles['projects-description']}>
           <h3 id="#projects">Projects</h3>
-        </div>
-        <div className={styles['project-row']}>
-          <div className={styles['project-imagewrapper']}>
-            <Image src={ PrelovedImage} width={500} height={310} className={styles['project-image']} />
-          </div>
-          <div className={styles['project-textwrapper']}>
-          <div className={styles['project-textwrapper__inner']}>
-            <h3>Preloved</h3>
-            <ul className={styles['project-tags']}>
-              <li>
-              <span className={styles['project-tags__plus']}>
-                <Image src={Plus} width={10} height={10} alt={"Techstack"}/>
-              </span>
-              <span>Ruby</span>
-              </li>
-                <li>
-                  <span className={styles['project-tags__plus']}>
-                <Image src={Plus} width={10} height={10} alt={"Techstack"}/>
-              </span>
-              <span>Rails</span></li>
-              <li>
-                <span className={styles['project-tags__plus']}>
-                <Image src={Plus} width={10} height={10} alt={"Techstack"}/>
-              </span>
-              <span>HTML5/CSS3</span></li>
-                <li>
-                  <span className={styles['project-tags__plus']}>
-                <Image src={Plus} width={10} height={10} alt={"Techstack"}/>
-              </span>
-              <span>Bootstrap</span></li>
-            </ul>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vehicula quis risus ut pharetra. Vivamus scelerisque lacus sed nibh venenatis viverra.</p>
-            <div className={styles['project-actions']}>
-                <Link href="/">
-                  <a className={styles['project-actions__repolink']}> <span>See Source Code</span></a></Link>
-                <Link href="/">
-                  <a className={styles['project-actions__livelink']}><span>Go Live</span></a></Link>
-            </div>
-          </div>
-          </div>
-        </div>
-        <div className={styles['project-row']}>
-          <div className={styles['project-textwrapper']}>
+        </Row>
+        <Row className={`${styles['project-row']} ${styles['project-row--odd']}`}>
+          <Col lg={ 6} className={styles['project-imagewrapper']}>
+            <MiniCarousel slide1={Project1Image1} slide2={Project1Image2} slide3={Project1Image3} />
+          </Col>
+          <Col lg={6}>
             <div className={styles['project-textwrapper__inner']}>
-              <h3>LinkedOut</h3>
+              <h3 className={styles['project__title'] }>Preloved</h3>
               <ul className={styles['project-tags']}>
                 <li>
                 <span className={styles['project-tags__plus']}>
                   <Image src={Plus} width={10} height={10} alt={"Techstack"} />
                 </span>
-                <span>MongoDB</span></li>
+                <span>Ruby</span></li>
                 <li>              <span className={styles['project-tags__plus']}>
                   <Image src={Plus} width={10} height={10} alt={"Techstack"}/>
                 </span>
-                <span>ExpressJS</span></li>
+                <span>Rails</span></li>
                 <li>              <span className={styles['project-tags__plus']}>
                   <Image src={Plus} width={10} height={10} alt={"Techstack"}/>
                 </span>
-                <span>React</span></li>
+                <span>Gems</span></li>
                 <li>              <span className={styles['project-tags__plus']}>
                   <Image src={Plus} width={10} height={10} alt={"Techstack"}/>
                 </span>
-                <span>NodeJS</span></li>
-                <li>
-                <span className={styles['project-tags__plus']}>
-                  <Image src={Plus} width={10} height={10} alt={"Techstack"}/>
-                </span>
-                <span>CSS3/HTML5</span></li>
+                  <span>Bootstrap</span>
+                </li>
               </ul>
 
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vehicula quis risus ut pharetra. Vivamus scelerisque lacus sed nibh venenatis viverra.</p>
+              <p className={ styles['project__summary']}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vehicula quis risus ut pharetra. Vivamus scelerisque lacus sed nibh venenatis viverra.</p>
             <div className={styles['project-actions']}>
                 <Link href="/">
                   <a className={styles['project-actions__repolink']}> <span>See Source Code</span></a></Link>
                 <Link href="/">
-                  <a className={styles['project-actions__livelink']}><span>Go Live</span></a></Link>
-            </div>
-            </div>
-          </div>
+                  <a className={styles['project-actions__livelink']}>Go Live</a></Link>
+              </div>
+              </div>
+          </Col>
+        </Row>
 
-          <div className={styles['project-imagewrapper']}>
-            <Image src={LinkedoutImage} width={500} height={280} className={styles['project-image']} alt={ "Linkedout "}/>
-          </div>
-        </div>
-      </div>
+        <Row className={`${styles['project-row']} ${styles['project-row--even']}`}>
+          <Col lg={6}>
+            <div className={styles['project-textwrapper__inner']}>
+              <h3 className={styles['project__title'] }>LinkedOut</h3>
+              <ul className={styles['project-tags']}>
+                <li>
+                  <span className={styles['project-tags__plus']}>
+                    <Image src={Plus} width={10} height={10} alt={"Techstack"} />
+                  </span>
+                  <span>MongoDB</span></li>
+                <li>
+                  <span className={styles['project-tags__plus']}>
+                    <Image src={Plus} width={10} height={10} alt={"Techstack"}/>
+                  </span>
+                  <span>Express</span></li>
+                <li>
+                  <span className={styles['project-tags__plus']}>
+                    <Image src={Plus} width={10} height={10} alt={"Techstack"}/>
+                  </span>
+                  <span>React</span>
+                </li>
+                <li>
+                  <span className={styles['project-tags__plus']}>
+                    <Image src={Plus} width={10} height={10} alt={"Techstack"}/>
+                  </span>
+                  <span>Node</span></li>
+              </ul>
+
+              <p className={ styles['project__summary'] }>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vehicula quis risus ut pharetra. Vivamus scelerisque lacus sed nibh venenatis viverra.</p>
+            <div className={styles['project-actions']}>
+                <Link href="/">
+                  <a className={styles['project-actions__repolink']}> <span>See Source Code</span></a></Link>
+                <Link href="/">
+                  <a className={styles['project-actions__livelink']}>Go Live</a></Link>
+              </div>
+              </div>
+          </Col>
+
+          <Col lg={ 6} className={styles['project-imagewrapper']}>
+            <MiniCarousel slide1={Project2Image1} slide2={Project2Image2} slide3={Project2Image3} />
+          </Col>
+
+        </Row>
+      </Container>
 
       <div className={styles['shots-container']}>
         <div className={styles['shots-summary']}>
@@ -213,6 +212,8 @@ export default function Home({ shots }) {
           ))}
         </div>
       </div>
+
+
 
     </div>
   )

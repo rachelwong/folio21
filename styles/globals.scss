@@ -16,20 +16,21 @@
   border: none;
   background: transparent;
   box-shadow: none;
+  font-display: swap;
 }
 
 html { font-size: 62.5%; }
 
 body {
   font-family: var(--Roboto);
+  font-display: swap;
 }
 a {
-  color: inherit;
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
 #__next {
-    display:flex;
+  display:flex;
   flex-direction: column;
   min-height: 100vh;
   overflow-x: hidden;
