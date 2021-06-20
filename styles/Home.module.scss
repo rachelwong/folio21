@@ -17,34 +17,53 @@
   z-index: 1;
   height: 100vh;
   width: 90%;
-  display:flex;
-  justify-content: space-between;
   transform: translateX(-50%);
   left: 50%;
   max-width: 120rem;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+
+  @include respond(tablet) {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
 .home-header__text {
-  flex: 1 1 66.666%;
-  flex-basis: 66.666%;
-  max-width: 66.666%;
 
+  flex: 1 1 auto;
+  flex-basis: 100%;
+  max-width: 100%;
+  width: 100%;
   display:flex;
   align-items: center;
 
   font-size: 6rem;
   font-family: var(--SpaceGrotesk);
   font-weight: 500;
+
+  @include respond(tablet) {
+    flex: 1 1 66.666%;
+    flex-basis: 66.666%;
+    max-width: 66.666%;
+  }
 }
 
 .home-header__visuals {
-  flex: 1 1 33.333%;
-  flex-basis: 33.333%;
-  max-width: 33.333%;
+  display: none;
 
-  display:flex;
-  justify-content: center;
-  align-items: center;
+  @include respond(tablet) {
+    flex: 1 1 33.333%;
+    flex-basis: 33.333%;
+    max-width: 33.333%;
+
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+  }
 }
 
 .home-header-btn {}
@@ -285,30 +304,59 @@
   display:grid;
   grid-template-columns: 1fr 1fr;
   gap: 4rem;
-  padding: 3rem 0 5rem;
+
+  padding: 3rem 0;
+  @include respond(tablet){
+    padding: 3rem 0 5rem;
+  }
 }
 
 .home-header__text__line {
-  height: 26rem;
   width:100%;
   display:block;
-  overflow: hidden;
+  letter-spacing: -.6px;
+  font-size: 5rem;
   font-weight: 700;
-  letter-spacing: -.8px;
-  line-height: 1.2;
+  line-height: 1;
+
+  @include respond(tablet) {
+  font-size: 8.5rem;
+  line-height: .9;
+
+  }
 }
 
-.home-header__text__small {
-  font-size: 2rem;
+.home-header__text__line-inner {
+  margin-bottom: 1rem;
+  letter-spacing: -1px;
+
+}
+
+.home-header__text__line--smaller {
+  font-size: 3rem;
   font-family: var(--Roboto);
-  font-weight: 800;
+  font-weight: 400;
+  margin-bottom: .5rem;
+  line-height: 3.6rem;
 }
 
 .home-header__text__line--blurb {
-  height: 3rem;
-  width: 100%;
+  font-size: 3rem;
+  font-family: var(--Roboto);
+  font-weight: 400;
+  line-height: 3.6rem;
+}
+
+.home-header__text__mask {
   display:block;
-  font-size: 6rem;
-  font-family: var(--SpaceGrotesk);
-  font-weight: 500;
+  overflow: hidden;
+  width: 100%;
+
+  @include respond(mobile) {
+  }
+
+  @include respond (tab-land) {
+    height: 4rem;
+
+  }
 }

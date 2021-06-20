@@ -44,7 +44,7 @@ export default function Home({ shots }) {
 
   const titleLine1 = "Hello I'm Rachel."
   const titleLine2 = "I am a front-end developer from Brisbane."
-  const titleLine3 = "I enjoy building interfaces and writing for tech."
+  const titleLine3 = "I enjoy building interfaces & tech writing."
 
   // variants for framer motion
   const sentence = {
@@ -93,15 +93,27 @@ export default function Home({ shots }) {
           <div className={styles['home-header__text']}>
             <div className={ styles['home-header__text-wrapper']}>
               <div className={styles['home-header__text__line']}>
-                <motion.div className={styles['home-header__text__line-inner']}
-                  initial="hidden"
-                  animate="visible"
-                  variants={sentence}>
-                  {titleLine1.split("").map((char, index) => {
-                    return (
-                      <motion.span key={char + "-" + index} variants={letter}>{ char }</motion.span>
-                    )
-                  })}
+                <motion.div>
+                  <motion.div className={styles['home-header__text__line-inner']}
+                    initial="hidden"
+                    animate="visible"
+                    variants={sentence}>
+                    {titleLine1.split("").map((char, index) => {
+                      return (
+                        <motion.span key={char + "-" + index} variants={letter}>{ char }</motion.span>
+                      )
+                    })}
+                  </motion.div>
+                  <div className={styles['home-header__text__mask']}>
+                    <motion.div initial={{ y: 100 }} animate={{ y: 0 }} transition={{ duration: 1, delay: .5}} className={styles['home-header__text__line--smaller']}>
+                      { titleLine2}
+                    </motion.div>
+                  </div>
+                  <div className={styles['home-header__text__mask']}>
+                    <motion.div initial={{ y: 100 }} animate={{ y: 0 }} transition={{ duration: 1, delay: 1}} className={styles['home-header__text__line--blurb']}>
+                    { titleLine3}
+                    </motion.div>
+                  </div>
                 </motion.div>
               </div>
             </div>
