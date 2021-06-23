@@ -25,10 +25,13 @@ const Footer = () => {
                   <Link href="/blog">Blog</Link>
                 </li>
                 <li>
+                  <Link href="/illustration/illo">Illustration</Link>
+                </li>
+                <li>
                   <Link href="http://www.bitbucket.com/rachel-wong">Bitbucket</Link>
                 </li>
                 <li>
-                  <Link href="http://www.bitbucket.com/rachel-wong">Contact</Link>
+                  <Link href="http://www.linkedin.com/in/rachwong">Contact</Link>
                 </li>
               </ul>
             </nav>
