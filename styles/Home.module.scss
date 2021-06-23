@@ -11,6 +11,89 @@
   position:relative;
   top: 0;
 }
+/* graphic on carousel */
+.home-header__graphic {
+  position:absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.home-header__svgs {
+  position: absolute;
+  img {
+    display:block;
+    width: 100%;
+    height: 100%;
+  }
+
+  div {
+    width: 100%;
+  }
+}
+
+.home__header__braces1 {
+  width: 60rem;
+  height: 60rem;
+  transform: rotate(18deg);
+  bottom: -10%;
+}
+
+.home__header__hex2 {
+  width: 15rem;
+  transform: rotate(-10deg);
+  bottom: 15%;
+  right: 5%;
+}
+
+.home__header__star1 {
+  width: 20rem;
+  transform: rotate(-10deg);
+  right: 30%;
+  top: 15%;
+}
+
+.home__header__circle1  {
+  width: 5rem;
+  bottom: 25%;
+  right: 45%;
+}
+
+.home__header__arrow1 {
+  width: 30rem;
+  right: 4%;
+  top: 2%;
+  width: 15rem;
+  transform: rotate(195deg);
+}
+
+.home__header__circle2 {
+  width: 5rem;
+  top: -2%;
+  left:40%;
+}
+
+.home__header__circle3 {
+  width: 3rem;
+  left: 10%;
+  top: 20%;
+}
+
+.home__header__hex1 {
+  width: 10rem;
+  left: 5%;
+  top: 10%;
+  transform: rotate(45deg);
+}
+
+.home__header__funct1 {
+  width: 10rem;
+  transform: rotate(335deg);
+  top: 30%;
+  left: 40%;
+}
+/* graphic on carousel*/
 
 .home-header__wrapper {
   position:absolute;

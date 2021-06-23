@@ -24,6 +24,12 @@ import Container from 'react-bootstrap/Container';
 import Button from 'react-bootstrap/Button';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import Braces from '../public/braces.svg'
+import Arrow from '../public/arrow.svg'
+import Star from '../public/star.svg'
+import Circle from '../public/circle.svg'
+import Funct from '../public/funct.svg'
+import Hex from '../public/hex.svg'
 
 export const getStaticProps = async () => {
   const client = createClient({
@@ -88,7 +94,76 @@ export default function Home({ shots }) {
         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />
         <meta name="theme-color" content="#ffffff" />
       </Head>
-      <div className={ styles['home-header']}>
+      <div className={styles['home-header']}>
+        <motion.div className={styles['home-header__graphic']}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ staggerChildren: 0.5 }}>
+          <motion.div className={`${styles['home__header__braces1']} ${styles['home-header__svgs']}`}
+            initial={{
+              opacity: 0,
+            }}
+            animate={{
+              opacity: 0.6,
+            }}
+            transition={{
+              duration: 2,
+              delay: 0.5
+            }} >
+            <Image src={Braces} width={300} height={ 300} />
+          </motion.div>
+          <motion.div
+            className={`${styles['home__header__star1']} ${styles['home-header__svgs']}`}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{duration: 1.5, delay: 1}}
+          >
+            <Image src={Star} width={300} height={ 300} />
+          </motion.div>
+          <motion.div className={`${styles['home__header__hex2']} ${styles['home-header__svgs']}`}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{duration: 1.5, delay: 1}}
+          >
+            <Image src={Hex} width={300} height={ 300} />
+          </motion.div>
+          <motion.div className={`${styles['home__header__circle1']} ${styles['home-header__svgs']}`}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{duration: 1.5, delay: 1}}
+          >
+            <Image src={Circle} width={300} height={ 300} />
+          </motion.div>
+          <motion.div className={`${styles['home__header__circle2']} ${styles['home-header__svgs']}`}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{duration: 1.5, delay: 1}}
+          >
+            <Image src={Circle} width={300} height={ 300} />
+          </motion.div>
+          <motion.div className={`${styles['home__header__circle3']} ${styles['home-header__svgs']}`}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{duration: 1.5, delay: 1}}
+          >
+            <Image src={Circle} width={300} height={ 300} />
+          </motion.div>
+          <motion.div className={`${styles['home__header__funct1']} ${styles['home-header__svgs']}`}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{duration: 1.5, delay: 1}}
+          >
+            <Image src={Funct} width={10} height={ 10} />
+          </motion.div>
+          <motion.div className={`${styles['home__header__arrow1']} ${styles['home-header__svgs']}`}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{duration: 1.5, delay: 1}}
+          >
+            <Image src={Arrow} width={300} height={ 300} />
+          </motion.div>
+
+        </motion.div>
         <div className={styles['home-header__wrapper']}>
           <div className={styles['home-header__text']}>
             <div className={ styles['home-header__text-wrapper']}>
