@@ -43,9 +43,17 @@ const Navbar = () => {
                 </Link>
               </li>
               <li className={styles['nav-list-item']}>
-                <Link href="http://www.linkedin.com/in/rachwong">
+                <Link href="/illustration">
                   <a>
               <span className={styles['nav-list-item__num']} aria-hidden="true">04</span>
+                  Illustration
+                  </a>
+                </Link>
+              </li>
+              <li className={styles['nav-list-item']}>
+                <Link href="http://www.linkedin.com/in/rachwong">
+                  <a>
+              <span className={styles['nav-list-item__num']} aria-hidden="true">05</span>
                   Contact
                   </a>
                 </Link>

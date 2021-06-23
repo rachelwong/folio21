@@ -1,0 +1,62 @@
+@use './mixins.scss';
+@import './mixins.scss';
+
+.illo-container {
+  flex: 1 1 auto;
+  position:relative;
+  min-height: 100vh;
+}
+
+.illo__content {
+    padding: 0 3rem;
+
+  @include respond(tablet) {
+    padding: 0;
+  }
+
+}
+
+.illo__inner {
+  max-width: 128rem;
+  width: 100%;
+  margin: 0 auto;
+
+}
+
+.illo-gallery {
+}
+
+.illo__content {
+  padding: 4rem 0;
+}
+.illo__content__heading {
+  font-size: 6rem;
+  font-family: var(--SpaceGrotesk);
+  text-align: center;
+}
+
+.illo__gallery__inner {
+  display:flex;
+  flex-direction: column;
+  @include respond (tablet) {
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 5rem;
+  }
+
+  img {
+
+    display:block;
+    width: 100%;
+    padding: 3rem;
+
+    @include respond(tablet){
+      padding: 0;
+    }
+
+  }
+}
+
+  .ReactGridGallery_tile {
+    background: transparent !important;
+  }
