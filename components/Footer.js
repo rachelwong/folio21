@@ -13,7 +13,7 @@ const Footer = () => {
       <footer className={styles.footer}>
         <div className={styles['footer-wrapper']}>
           <div className={styles['footer-image-wrapper']}>
-            <Image src={footerImage} width={180} height={ 220}/>
+            {/* <Image src={footerImage} width={180} height={ 220}/> */}
           </div>
           <div className={styles['footer-nav-wrapper']}>
             <nav className={styles['footer-nav']}>

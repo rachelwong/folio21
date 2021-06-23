@@ -76,13 +76,28 @@
   margin-left: 2rem;
   cursor:pointer;
   position:relative;
+
+  a {
+    color: black;
+    position:relative;
+    background-image: linear-gradient(to bottom, black, black), linear-gradient(to bottom, lightcoral, lightcoral);
+    background-size: 100% .2rem, 0 .2rem;
+    background-position: 100% 95%, 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size .2s ease-out;
+  }
+
+  a:hover, a:focus {
+    color: black;
+      background-size: 0 .2rem, 0 .8rem;
+  }
 }
 
-.nav-list-item:after {
-  before: '';
-  position:absolute;
-  display:block;
-}
+// .nav-list-item:after {
+//   before: '';
+//   position:absolute;
+//   display:block;
+// }
 
 .nav-list-item__num {
   margin-right: .5rem;

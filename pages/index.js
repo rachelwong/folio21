@@ -123,21 +123,21 @@ export default function Home({ shots }) {
           <motion.div className={`${styles['home__header__hex2']} ${styles['home-header__svgs']}`}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{duration: 1.5, delay: 1}}
+            transition={{duration: 1.3, delay: 1.5}}
           >
             <Image src={Hex} width={300} height={ 300} />
           </motion.div>
           <motion.div className={`${styles['home__header__circle1']} ${styles['home-header__svgs']}`}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{duration: 1.5, delay: 1}}
+            transition={{duration: 1.3, delay: 1.5}}
           >
             <Image src={Circle} width={300} height={ 300} />
           </motion.div>
           <motion.div className={`${styles['home__header__circle2']} ${styles['home-header__svgs']}`}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{duration: 1.5, delay: 1}}
+            transition={{duration: 1.3  , delay: 1.3}}
           >
             <Image src={Circle} width={300} height={ 300} />
           </motion.div>
@@ -194,7 +194,7 @@ export default function Home({ shots }) {
             </div>
           </div>
           <div className={styles['home-header__visuals']}>
-            <Image src={DummyImage} width={230} height={300} />
+            {/* <Image src={DummyImage} width={230} height={300} /> */}
           </div>
         </div>
         <Carousel />
