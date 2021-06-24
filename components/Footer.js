@@ -25,7 +25,7 @@ const Footer = () => {
                   <Link href="/blog">Blog</Link>
                 </li>
                 <li>
-                  <Link href="https://rachwong.tumblr.com" target="_blank">Illustration</Link>
+                  <Link href="/illustration">Illustration</Link>
                 </li>
                 <li>
                   <Link href="http://www.bitbucket.com/rachel-wong" target="_blank">Bitbucket</Link>
