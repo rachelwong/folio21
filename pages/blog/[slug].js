@@ -7,6 +7,9 @@ import "../../node_modules/slick-carousel/slick/slick.css"
 import "../../node_modules/slick-carousel/slick/slick-theme.css"
 import SyntaxHighlighter from "react-syntax-highlighter";
 import { docco } from 'react-syntax-highlighter/dist/cjs/styles/hljs';
+import { useRouter } from "next/router"
+import Arrow from '../../public/arrow-right-solid.svg'
+import Image from 'next/image'
 
 // Initialise connection with contentful server
 const client = createClient({
@@ -126,6 +129,8 @@ const Post = ({ post }) => {
 
   if (!post) return "" // error handling when new content is not available
 
+  const router = useRouter()
+
   const settings = {
     dots: false,
     fade: true,
@@ -161,6 +166,14 @@ const Post = ({ post }) => {
         <div className={ styles['post-container__inner']}>
           { documentToReactComponents(mainText,renderOptions)}
         </div>
+      </div>
+      <div className={styles['post-footer-nav']}>
+          {router.pathname !== "/" && (
+          <button onClick={() => router.back()} className={styles['post-footer-nav__btn']}>
+            <span className={styles['post-footer-nav__btn__label'] }>Go Back</span>
+            <Image src={Arrow} width={15} height={ 15} />
+          </button>
+          )}
       </div>
     </div>
     )
