@@ -8,16 +8,6 @@ module.exports = withSass({
 })
 
 module.exports = {
-/* Add Your Scss File Folder Path Here */
-  sassOptions: {
-    includePaths: [path.join(__dirname, 'styles')],
-  },
-    images: {
-    domains: ['images.ctfassets.net'],
-  },
-}
-
-module.exports = {
   webpack(config, options) {
     const { isServer } = options;
     config.module.rules.push({
@@ -39,5 +29,11 @@ module.exports = {
     });
 
     return config;
+  },
+  sassOptions: {
+    includePaths: [path.join(__dirname, 'styles')],
+  },
+    images: {
+    domains: ['images.ctfassets.net'],
   },
 };
