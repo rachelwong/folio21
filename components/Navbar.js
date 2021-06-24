@@ -35,7 +35,7 @@ const Navbar = () => {
                 </Link>
             </li>
               <li className={styles['nav-list-item']}>
-                <Link href="https://www.rachwong.tumblr.com" target="_blank">
+                <Link href="https://rachwong.tumblr.com" target="_blank">
                   <a>
                   <span className={styles['nav-list-item__num']} aria-hidden="true">03</span>
                   Illustration
@@ -89,7 +89,7 @@ const Navbar = () => {
                 </Link>
               </li>
               <li className={styles['nav-list-item']}>
-                <Link href="http://www.rachwong.tumblr.com" target="_blank">
+                <Link href="https://rachwong.tumblr.com" target="_blank">
                   <a>
               <span className={styles['nav-list-item__num']} aria-hidden="true">03</span>
                   Illustration

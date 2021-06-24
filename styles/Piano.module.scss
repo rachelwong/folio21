@@ -1,0 +1,287 @@
+@use './mixins.scss';
+@import './mixins.scss';
+
+.piano {
+
+  display: none;
+
+  @include respond(desktop) {
+    display:block;
+    transform: rotate(12deg) !important;
+    background: #333740;
+    width: 400px;
+    height: 490px;
+    border: 6px solid #292c33;
+    border-radius: 10px;
+    box-shadow: inset 0px 0px 1px 2px #474d5a,
+    0 1px 1px rgba(0,0,0,0.12),
+                0 2px 2px rgba(0,0,0,0.12),
+                0 4px 4px rgba(0,0,0,0.12),
+                0 8px 8px rgba(0,0,0,0.12),;
+  }
+}
+
+.piano__inner {
+  padding: 1rem 1rem 0;
+  width: 100%;
+  height: 100%;
+  position:relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.piano-screen{
+  width: 100%;
+  height: 51%;
+  display:block;
+  background: #4b525f;
+  border: 4px solid #2b2e34;
+  box-shadow: inset 0px 0px 0px 5px #474d5a,
+  0 3px 0 0 #4b4e56;
+  overflow: hidden;
+}
+
+.piano-keys__wrapper {
+  height: 45%;
+  background: grey;
+  width: 100%;
+  overflow: hidden;
+}
+
+.piano-keys {
+  list-style: none;
+  display:flex;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+  position:relative;
+  border:3px solid #292c33;
+}
+
+.piano-key {
+  position:relative;
+}
+
+.piano-key.sharp:after {
+  position:absolute;
+  display:block;
+  width: 100%;
+  height: 1.5rem;
+  background: #292c33;
+  content: '';
+  top: 0;
+  left:0;
+  z-index: 9;
+  opacity: .3;
+}
+
+.piano-key.natural {
+  position:relative;
+  background: #f3f3f3;
+  flex: 1 1 14.2857%;
+  flex-basis: 14.2857%;
+  max-width: 14.2857%;
+  width: 100%;
+  height: 100%;
+  display:block;
+  border: 2px solid #292c33;
+}
+
+.piano-key.natural:before{
+  position:absolute;
+  display:block;
+  content: '';
+  width: 100%;
+  height:.2rem;
+  background: #292c33;
+  bottom: 0;
+  left:0;
+  opacity: .3;
+  z-index: 9;
+}
+
+.piano-key.natural:before{
+  position:absolute;
+  display:block;
+  content: '';
+  width: 100%;
+  height:.2rem;
+  background: #292c33;
+  bottom: 0;
+  left:0;
+  opacity: .3;
+  z-index: 9;
+}
+
+.piano-key.natural:after{
+    position:absolute;
+  display:block;
+  width: 100%;
+  height: 1.5rem;
+  background: #292c33;
+  content: '';
+  top: 0;
+  left:0;
+  z-index: 0;
+  opacity: .3;
+
+}
+
+.piano-key.sharp {
+  z-index: 1;
+  position:absolute;
+  max-width: 4rem;
+  height: 10rem;
+  display:block;
+  width: 100%;
+  top: .1rem;
+  border-left:4px solid #292c33;
+  border-right:4px solid #292c33;
+  border-bottom:4px solid #292c33;
+
+  background-color: #464c59;
+  box-shadow: 0px 14px 0px 0px rgba(0,0,0,0.1);
+
+}
+
+.piano-key.sharp:before{
+  display:block;
+  content: '';
+  position:absolute;
+  width: 100%;
+  height: 1rem;
+  z-index: 10;
+  background: #2f333c;
+  opacity: .5;
+  bottom: 0;
+}
+
+.d-sharp{
+  left: 3rem;
+}
+
+.e-sharp{
+  left: 8.5rem;
+}
+
+.f-sharp {
+  left: 18.5rem;
+}
+
+.g-sharp {
+  left: 24rem;
+}
+
+.a-sharp {
+  left: 29.3rem;
+}
+
+.piano__screen__glare {
+  width: 10rem;
+  height: 100%;
+  background: #616571;
+  display:block;
+  position:relative;
+  top: 0;
+  left: 30%;
+  transform: skew(-20deg);
+  opacity: .8;
+}
+
+.piano__screen__glare:before {
+  position:absolute;
+  width: 5rem;
+  height: 100%;
+  display:block;
+  content: '';
+  left:-80%;
+  top:0;
+  background: #616571;
+  z-index: 1;
+}
+
+.piano__screen__glare:after {
+  position:absolute;
+  width: 5rem;
+  height: 100%;
+  display:block;
+  content: '';
+  left:140%;
+  top:0;
+  background: #616571;
+  z-index: 1;
+}
+
+.piano__screen__beats {
+  list-style:none;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  position:relative;
+
+  top:-16rem
+}
+
+.piano__screen__beats .beat{
+  flex: 1 1 25%;
+  flex-basis: 25%;
+  width: 100%;
+  max-width: 25%;
+  height: 1.3rem;
+  margin: 0 1rem;
+  background:#5effd3;
+}
+
+.piano__screen__beats .beat.odd {
+  margin-top: -6rem;
+}
+.piano__screen__beats .beat.even {
+}
+
+.piano__screen__quavers {
+  list-style: none;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  top: -13rem;
+  position:relative;
+  margin-left: 1rem;
+}
+
+.piano__screen__quavers .beat {
+  flex: 1 1 1.5rem;
+  flex-basis: 1.5rem;
+  max-width: 1.5rem;
+  width: 100%;
+  height: 1.5rem;
+}
+
+.piano__screen__quavers .beat.odd {
+    background: #5effd3;
+}
+
+.piano__screen__quavers .beat.even {
+    background: #7f9386;
+}
+
+.piano__screen__minims {
+  list-style:none;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+  position: relative;
+  top: -9.5rem;
+}
+
+.piano__screen__minims li {
+  background: #5effd3;
+  flex: 1 1 50%;
+  flex-basis: 50%;
+  max-width: 50%;
+  height: 1.3rem;
+  width: 100%;
+  margin: 0 1rem;
+  display:block;
+}

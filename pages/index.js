@@ -30,6 +30,7 @@ import Star from '../public/star.svg'
 import Circle from '../public/circle.svg'
 import Funct from '../public/funct.svg'
 import Hex from '../public/hex.svg'
+import Piano from '../components/Piano'
 
 export const getStaticProps = async () => {
   const client = createClient({
@@ -194,7 +195,7 @@ export default function Home({ shots }) {
             </div>
           </div>
           <div className={styles['home-header__visuals']}>
-            {/* <Image src={DummyImage} width={230} height={300} /> */}
+            <Piano />
           </div>
         </div>
         <Carousel />

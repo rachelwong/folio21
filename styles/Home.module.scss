@@ -124,7 +124,7 @@
   justify-content: center;
   align-items: center;
 
-  @include respond(tablet) {
+  @include respond(desktop) {
     display:flex;
     flex-direction: row;
     justify-content: space-between;
