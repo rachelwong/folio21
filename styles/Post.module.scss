@@ -21,7 +21,12 @@
   text-align: center;
   z-index: 1;
   position:relative;
+  margin-top: -30rem;
+
+  @include respond(mobile){
   margin-top: -25rem;
+
+  }
 }
 
 .post-banner__title {
@@ -45,8 +50,9 @@
   max-width: 120rem;
   width: 90%;
   margin: 0 auto;
-  margin-top: 30rem;
   background: white;
+    margin-top: 30rem;
+
 }
 
 .post-slide1,
@@ -78,9 +84,13 @@
   margin: 0 auto;
   max-width: 70rem;
   width: 100%;
-  padding: 5rem 0 ;
   font-size: 1.7rem;
   line-height: 1.575;
+  padding: 3rem 2rem ;
+
+  @include respond(mobile) {
+    padding: 5rem 2rem ;
+  }
 
   h1, h2, h3, h4, h5 {
     margin: 2rem 0 1rem;

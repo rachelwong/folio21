@@ -41,6 +41,8 @@
 }
 
 .home__header__hex2 {
+
+  display: none;
   @include respond(mobile){
     width: 15rem;
     transform: rotate(-10deg);
@@ -52,6 +54,8 @@
 .home__header__star1 {
   display: none;
   @include respond(mobile) {
+    display:block;
+    position:absolute;
     width: 20rem;
     transform: rotate(-10deg);
     right: 30%;
@@ -86,20 +90,23 @@
 }
 
 .home__header__hex1 {
-  display: none;
-  @include respond(mobile) {
+    display:block;
     width: 10rem;
     left: 5%;
     top: 10%;
     transform: rotate(45deg);
-  }
 }
 
 .home__header__funct1 {
   width: 10rem;
   transform: rotate(335deg);
-  top: 30%;
+  top:10%;
   left: 40%;
+
+  @include respond(mobile){
+    top: 30%;
+
+  }
 }
 /* graphic on carousel*/
 
@@ -393,6 +400,7 @@
 
 .shots-wrapper {
   padding: 3rem 0;
+
   @include respond(mobile) {
     display:grid;
     grid-template-columns: 1fr 1fr;
