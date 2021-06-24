@@ -1,10 +1,8 @@
 import { createClient} from 'contentful';
 import styles from '../../styles/Illo.module.scss'
 import Image from 'next/image'
-// import Gallery from 'react-grid-gallery';
-import { render } from 'react-dom';
-import 'photoswipe/dist/photoswipe.css'
-import 'photoswipe/dist/default-skin/default-skin.css'
+import '../../node_modules/photoswipe/dist/default-skin/default-skin.css'
+import '../../node_modules/photoswipe/dist/photoswipe.css'
 import { Gallery, Item } from 'react-photoswipe-gallery'
 
 export const getStaticProps = async () => {
