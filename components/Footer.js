@@ -9,7 +9,7 @@ import InstagramIcon from '../public/instagram-brands.svg'
 const Footer = () => {
   return (
     <div className="footer-container">
-      <svg class="page-wave" viewBox="0 0 1440 116" preserveAspectRatio="none" fill="#c8c8d3" style={{transform: "scaleY(-1)"}}><path d="M0,80.4l40-21.1C80,37.7,160-3.9,240,1s160,58.5,240,74.1c80,16.2,160-5.6,240-10.7c80-4.9,160,4.9,240,21.1c80,15.6,160,37.4,240,26.5s160-52.6,200-74.1l40-21.1V0H0V80.4z"></path></svg>
+      <svg className="page-wave" viewBox="0 0 1440 116" preserveAspectRatio="none" fill="#c8c8d3" style={{transform: "scaleY(-1)"}}><path d="M0,80.4l40-21.1C80,37.7,160-3.9,240,1s160,58.5,240,74.1c80,16.2,160-5.6,240-10.7c80-4.9,160,4.9,240,21.1c80,15.6,160,37.4,240,26.5s160-52.6,200-74.1l40-21.1V0H0V80.4z"></path></svg>
       <footer className={styles.footer}>
         <div className={styles['footer-wrapper']}>
           <div className={styles['footer-image-wrapper']}>

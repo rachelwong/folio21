@@ -35,9 +35,9 @@ const Navbar = () => {
                 </Link>
             </li>
               <li className={styles['nav-list-item']}>
-                <Link href="/illustration/illo">
+                <Link href="https://www.rachwong.tumblr.com" target="_blank">
                   <a>
-              <span className={styles['nav-list-item__num']} aria-hidden="true">04</span>
+                  <span className={styles['nav-list-item__num']} aria-hidden="true">04</span>
                   Illustration
                   </a>
                 </Link>
@@ -89,7 +89,7 @@ const Navbar = () => {
                 </Link>
               </li>
               <li className={styles['nav-list-item']}>
-                <Link href="/illustration/illo">
+                <Link href="http://www.rachwong.tumblr.com" target="_blank">
                   <a>
               <span className={styles['nav-list-item__num']} aria-hidden="true">04</span>
                   Illustration
@@ -97,7 +97,7 @@ const Navbar = () => {
                 </Link>
               </li>
               <li className={styles['nav-list-item']}>
-                <Link href="http://www.bitbucket.com/rachel-wong">
+                <Link href="http://www.bitbucket.com/rachel-wong" target="_blank">
                   <a>
               <span className={styles['nav-list-item__num']} aria-hidden="true">05</span>
                   Bitbucket
@@ -105,7 +105,7 @@ const Navbar = () => {
                 </Link>
               </li>
               <li className={styles['nav-list-item']}>
-                <Link href="http://www.linkedin.com/in/rachwong">
+                <Link href="http://www.linkedin.com/in/rachwong" target="_blank">
                   <a>
               <span className={styles['nav-list-item__num']} aria-hidden="true">06</span>
                   Contact
