@@ -13,11 +13,11 @@ const PostEntry = ({ post }) => {
   return (
     <Link href={'/blog/' + slug} >
       <a className={styles['post-entry-wrapper']}>
-        <div className={ styles['post-entry-imagewrap']}>
+        {/* <div className={ styles['post-entry-imagewrap']}>
           <Image src={'https:' + featureImage.fields.file.url} width={featureImage.fields.file.details.image.width}
           height={featureImage.fields.file.details.image.height}
               alt={title} />
-        </div>
+        </div> */}
         <time className={styles['post-entry-date']} dateTime={ publishedDate }>{parsedDate[2] + " " + month + " "+ parsedDate[0]}</time>
         <h3 className={ styles['post-entry-title']}>{ title }</h3>
         <ul className={ styles['post-entry-tags']}>{tags.length > 0 && tags.map((tag, tagIndex) => (
