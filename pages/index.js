@@ -231,6 +231,12 @@ export default function Home({ shots }) {
                 </span>
                   <span>Bootstrap</span>
                 </li>
+                <li>
+                  <span className={styles['project-tags__plus']}>
+                  <Image src={Plus} width={10} height={10} alt={"Techstack"}/>
+                </span>
+                  <span>HTML5/CSS3</span>
+                </li>
               </ul>
 
               <p className={ styles['project__summary']}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vehicula quis risus ut pharetra. Vivamus scelerisque lacus sed nibh venenatis viverra.</p>
@@ -269,7 +275,14 @@ export default function Home({ shots }) {
                   <span className={styles['project-tags__plus']}>
                     <Image src={Plus} width={10} height={10} alt={"Techstack"}/>
                   </span>
-                  <span>Node</span></li>
+                  <span>Node</span>
+                </li>
+                <li>
+                  <span className={styles['project-tags__plus']}>
+                    <Image src={Plus} width={10} height={10} alt={"Techstack"}/>
+                  </span>
+                  <span>Bulma</span>
+                </li>
               </ul>
 
               <p className={ styles['project__summary'] }>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vehicula quis risus ut pharetra. Vivamus scelerisque lacus sed nibh venenatis viverra.</p>

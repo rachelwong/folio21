@@ -276,9 +276,11 @@
 .project-tags {
   list-style: none;
   display:flex;
+  flex-wrap: wrap;
   font-size: 1.2rem;
-  margin-left: -.5rem;
-  margin-right: -.5rem;
+  // margin-left: -.5rem;
+  // margin-right: -.5rem;
+  margin: -.5rem -.5rem 1rem;
   padding: 1rem 0 0.5rem;
 }
 
@@ -286,11 +288,12 @@
   padding: .8rem 1.3rem .8rem 1rem;
   background: #f0f4f9;
   border-radius: 2.6rem;
-  margin: 0 .5rem;
+  margin: .5rem .5rem;
   color: #2c2a42;
   font-weight: 700;
   display:flex;
   align-items: center;
+  flex-wrap: nowrap;
   transition: background 0.3s ease-out;
 
   li:after {
@@ -342,7 +345,6 @@
   &:hover {
     color: black;
     background-size: 0 2px, 100% 2px;
-
   }
 }
 

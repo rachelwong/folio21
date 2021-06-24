@@ -21,7 +21,7 @@ const PostEntry = ({ post }) => {
         <time className={styles['post-entry-date']} dateTime={ publishedDate }>{parsedDate[2] + " " + month + " "+ parsedDate[0]}</time>
         <h3 className={ styles['post-entry-title']}>{ title }</h3>
         <ul className={ styles['post-entry-tags']}>{tags.length > 0 && tags.map((tag, tagIndex) => (
-          <li key={ tagIndex }>{ tag }</li>
+          <li key={ tagIndex }><span>{ tag }</span></li>
         ))}</ul>
         <p className={ styles['post-blurb']}>{ blurb }</p>
       </a>

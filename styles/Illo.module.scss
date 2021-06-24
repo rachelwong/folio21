@@ -38,6 +38,8 @@
 .illo__gallery__inner {
   display:flex;
   flex-direction: column;
+
+
   @include respond (tablet) {
     display:grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -48,8 +50,11 @@
     cursor:pointer;
     display:block;
     width: 100%;
-    padding: 3rem;
+    padding: 1.5rem 0;
 
+    @include respond(mobile) {
+      padding: 3rem;
+    }
     @include respond(tablet){
       padding: 0;
     }
