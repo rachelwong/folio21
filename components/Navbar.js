@@ -37,7 +37,7 @@ const Navbar = () => {
               <li className={styles['nav-list-item']}>
                 <Link href="https://www.rachwong.tumblr.com" target="_blank">
                   <a>
-                  <span className={styles['nav-list-item__num']} aria-hidden="true">04</span>
+                  <span className={styles['nav-list-item__num']} aria-hidden="true">03</span>
                   Illustration
                   </a>
                 </Link>
@@ -46,7 +46,7 @@ const Navbar = () => {
               <li className={styles['nav-list-item']}>
                 <Link href="http://www.bitbucket.com/rachel-wong">
                   <a>
-              <span className={styles['nav-list-item__num']} aria-hidden="true">05</span>
+              <span className={styles['nav-list-item__num']} aria-hidden="true">04</span>
                   Bitbucket
                   </a>
                 </Link>
@@ -54,7 +54,7 @@ const Navbar = () => {
               <li className={styles['nav-list-item']}>
                 <Link href="http://www.linkedin.com/in/rachwong">
                   <a>
-              <span className={styles['nav-list-item__num']} aria-hidden="true">06</span>
+              <span className={styles['nav-list-item__num']} aria-hidden="true">05</span>
                   Contact
                   </a>
                 </Link>
@@ -91,7 +91,7 @@ const Navbar = () => {
               <li className={styles['nav-list-item']}>
                 <Link href="http://www.rachwong.tumblr.com" target="_blank">
                   <a>
-              <span className={styles['nav-list-item__num']} aria-hidden="true">04</span>
+              <span className={styles['nav-list-item__num']} aria-hidden="true">03</span>
                   Illustration
                   </a>
                 </Link>
@@ -99,7 +99,7 @@ const Navbar = () => {
               <li className={styles['nav-list-item']}>
                 <Link href="http://www.bitbucket.com/rachel-wong" target="_blank">
                   <a>
-              <span className={styles['nav-list-item__num']} aria-hidden="true">05</span>
+              <span className={styles['nav-list-item__num']} aria-hidden="true">04</span>
                   Bitbucket
                   </a>
                 </Link>
@@ -107,7 +107,7 @@ const Navbar = () => {
               <li className={styles['nav-list-item']}>
                 <Link href="http://www.linkedin.com/in/rachwong" target="_blank">
                   <a>
-              <span className={styles['nav-list-item__num']} aria-hidden="true">06</span>
+              <span className={styles['nav-list-item__num']} aria-hidden="true">05</span>
                   Contact
                   </a>
                 </Link>

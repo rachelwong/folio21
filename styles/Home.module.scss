@@ -52,12 +52,14 @@
 }
 
 .home__header__star1 {
-  display: none;
-  @include respond(mobile) {
     display:block;
     position:absolute;
-    width: 20rem;
     transform: rotate(-10deg);
+    width: 7rem;
+    top: 25%;
+    right: 40%;
+  @include respond(mobile) {
+    width: 20rem;
     right: 30%;
     top: 15%;
   }

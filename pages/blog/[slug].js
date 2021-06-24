@@ -138,8 +138,11 @@ const Post = ({ post }) => {
   };
 
   const {
-    mainText, title, publishedDate, tags
+    mainText, title, publishedDate
   } = post.fields
+
+  const parsedDate = publishedDate.split("-")
+  const month = new Date(Number(parsedDate[0]), Number(parsedDate[1]), Number(parsedDate[2])).toLocaleString('default', { month: 'long' })
 
   return (
     <div className={styles['post-wrapper']}>
@@ -150,7 +153,7 @@ const Post = ({ post }) => {
           <div className={styles['post-slide3']} id="slide3"></div>
         </Slider>
         <div className={styles['post-banner__content']}>
-          <time className={styles['post-banner__date']}>{ publishedDate}</time>
+          <time className={styles['post-banner__date']} dateTime={ publishedDate } >{ parsedDate[2] + " " + month + " "+ parsedDate[0] }</time>
           <h3 className={styles['post-banner__title']}>{ title }</h3>
         </div>
       </div>

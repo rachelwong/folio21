@@ -21,7 +21,11 @@
   text-align: center;
   z-index: 1;
   position:relative;
-  margin-top: -25rem;
+  margin-top: -30rem;
+
+  @include respond(mobile) {
+    margin-top: -25rem;
+  }
 }
 
 .blog-banner__title {
@@ -71,5 +75,8 @@
   margin: 0 auto;
   max-width: 70rem;
   width: 100%;
-  padding: 5rem 0 ;
+  padding: 3rem 2rem;
+  @include respond(mobile){
+    padding: 5rem \2rem ;
+  }
 }
