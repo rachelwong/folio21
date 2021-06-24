@@ -392,11 +392,13 @@
 }
 
 .shots-wrapper {
-  display:grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
-
   padding: 3rem 0;
+  @include respond(mobile) {
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+  }
+
   @include respond(tablet){
     padding: 3rem 0 5rem;
   }
