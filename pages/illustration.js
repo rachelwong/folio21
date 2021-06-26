@@ -4,6 +4,7 @@ import Image from 'next/image'
 import 'photoswipe/dist/photoswipe.css'
 import 'photoswipe/dist/default-skin/default-skin.css'
 import { Gallery, Item } from 'react-photoswipe-gallery'
+import { motion } from 'framer-motion'
 
 export const getStaticProps = async () => {
 
@@ -33,14 +34,23 @@ const illustration = ({ images }) => {
           <Gallery>
             {images.map((image, imageIdx) => (
                 <Item
-                original={ 'https:' + image.fields.image.fields.file.url }
-                thumbnail={ 'https:' + image.fields.thumbnail.fields.file.url }
-                width={ image.fields.image.fields.file.details.image.width }
-                height={ image.fields.image.fields.file.details.image.height}
-                key={ imageIdx}
+                original={'https:' + image.fields.image.fields.file.url}
+                thumbnail={'https:' + image.fields.thumbnail.fields.file.url}
+                width={image.fields.image.fields.file.details.image.width}
+                height={image.fields.image.fields.file.details.image.height}
+                key={imageIdx}
                 >
-                  {({ ref, open }) => (
-                  <img ref={ref} onClick={open} src={ image.fields.thumbnail.fields.file.url} />
+                {({ ref, open }) => (
+                  <motion.img
+                    ref={ref}
+                    onClick={open}
+                    src={image.fields.thumbnail.fields.file.url}
+                    initial={{ y: 15 }}
+                    animate={{ y: 0 }}
+                    transition={{
+                      duration: 0.5
+                    }}
+                  />
                   )}
                 </Item>
 

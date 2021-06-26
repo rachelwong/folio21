@@ -31,11 +31,11 @@ const Piano = () => {
 
   return (
     <motion.div className={styles.piano}
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
+      initial={{ opacity: 0, y: 0 }}
+      animate={{ opacity: 1, y: -25 }}
       transition={{
-        delay: 2,
-        duration: 1.5,
+        delay: .4,
+        duration: .3,
         ease: 'easeIn'
       }}
     >

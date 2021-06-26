@@ -44,20 +44,20 @@ const Navbar = () => {
               </li>
 
               <li className={styles['nav-list-item']}>
-                <Link href="http://www.bitbucket.com/rachel-wong">
+                <a target="_blank" href="http://www.bitbucket.com/rachel-wong"  rel="noopener noreferrer">
                   <a>
               <span className={styles['nav-list-item__num']} aria-hidden="true">04</span>
                   Bitbucket
                   </a>
-                </Link>
+                </a>
               </li>
               <li className={styles['nav-list-item']}>
-                <Link href="http://www.linkedin.com/in/rachwong">
+                <a target="_blank" href="http://www.linkedin.com/in/rachwong"  rel="noopener noreferrer">
                   <a>
               <span className={styles['nav-list-item__num']} aria-hidden="true">05</span>
                   Contact
                   </a>
-                </Link>
+                </a>
               </li>
           </ul>
         </nav>
@@ -97,20 +97,20 @@ const Navbar = () => {
                 </Link>
               </li>
               <li className={styles['nav-list-item']}>
-                <Link href="http://www.bitbucket.com/rachel-wong" target="_blank">
+                <a target="_blank" href="http://www.bitbucket.com/rachel-wong" rel="noopener noreferrer">
                   <a>
               <span className={styles['nav-list-item__num']} aria-hidden="true">04</span>
                   Bitbucket
                   </a>
-                </Link>
+                </a>
               </li>
               <li className={styles['nav-list-item']}>
-                <Link href="http://www.linkedin.com/in/rachwong" target="_blank">
+                <a target="_blank" href="http://www.linkedin.com/in/rachwong" rel="noopener noreferrer">
                   <a>
               <span className={styles['nav-list-item__num']} aria-hidden="true">05</span>
                   Contact
                   </a>
-                </Link>
+                </a>
               </li>
             </ul>
           </div>

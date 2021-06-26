@@ -61,8 +61,8 @@ export default function Home({ shots }) {
     visible: {
       transition: {
         opacity: 1,
-        delay: .2,
-        staggerChildren: 0.08
+        delay: .18,
+        staggerChildren: 0.05
       }
     }
   }
@@ -239,12 +239,12 @@ export default function Home({ shots }) {
                 </li>
               </ul>
 
-              <p className={ styles['project__summary']}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vehicula quis risus ut pharetra. Vivamus scelerisque lacus sed nibh venenatis viverra.</p>
+              <p className={ styles['project__summary']}>A full-stack ruby-on-rails application that allows private owners of second hand musical instruments to list at compassionate prices for Queensland schools to purchase for their students.</p>
             <div className={styles['project-actions']}>
                 <Link href="/">
-                  <a className={styles['project-actions__repolink']}> <span>See Source Code</span></a></Link>
+                  <a target="_blank" href="https://github.com/rachelwong/music" className={styles['project-actions__repolink']} ref="noopener noreferrer"> <span>See Source Code</span></a></Link>
                 <Link href="/">
-                  <a className={styles['project-actions__livelink']}>Go Live</a></Link>
+                  <a target="_blank" href="https://secret-mountain-45294.herokuapp.com/" rel="noopener noreferrer" className={styles['project-actions__livelink']}>Go Live</a></Link>
               </div>
               </div>
           </Col>
@@ -285,12 +285,12 @@ export default function Home({ shots }) {
                 </li>
               </ul>
 
-              <p className={ styles['project__summary'] }>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vehicula quis risus ut pharetra. Vivamus scelerisque lacus sed nibh venenatis viverra.</p>
+              <p className={ styles['project__summary'] }>LinkedOut is a full-stack MERN app where coding bootcamp graduates can list their profiles publicly for prospective employers and business clients to view and connect with for work opporunities.</p>
             <div className={styles['project-actions']}>
                 <Link href="/">
-                  <a className={styles['project-actions__repolink']}> <span>See Source Code</span></a></Link>
+                  <a target="_blank" href="https://github.com/rachelwong/linkedout-mern-client" className={styles['project-actions__repolink']} rel="noopener noreferrer"> <span>See Source Code</span></a></Link>
                 <Link href="/">
-                  <a className={styles['project-actions__livelink']}>Go Live</a></Link>
+                  <a target="_blank" href="https://linkedout.netlify.com/" className={styles['project-actions__livelink']} rel="noopener noreferrer">Go Live</a></Link>
               </div>
               </div>
           </Col>

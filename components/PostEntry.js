@@ -1,10 +1,8 @@
-// Component: A single post entry on the blog page which has a listing
-// Parent: Get data from /pages/blog.js
-// Child: n/a
-
 import styles from '../styles/PostEntry.module.scss';
 import Link from 'next/link'
 import Image from 'next/image'
+import { motion } from 'framer-motion'
+
 const PostEntry = ({ post }) => {
   const { title, slug, publishedDate, tags, featureImage, blurb } = post.fields
   const parsedDate = publishedDate.split("-")
@@ -12,7 +10,11 @@ const PostEntry = ({ post }) => {
 
   return (
     <Link href={'/blog/' + slug} >
-      <a className={styles['post-entry-wrapper']}>
+      <div className={styles['post-entry-wrapper']}
+        initial={{ y: 10 }}
+        animate={{ y: 0 }}
+        transition={{ duration: 0.5}}
+      >
         <div className={ styles['post-entry-imagewrap']}>
           <Image src={'https:' + featureImage.fields.file.url} width={featureImage.fields.file.details.image.width}
           height={featureImage.fields.file.details.image.height}
@@ -24,7 +26,7 @@ const PostEntry = ({ post }) => {
           <li key={ tagIndex }><span>{ tag }</span></li>
         ))}</ul>
         <p className={ styles['post-blurb']}>{ blurb }</p>
-      </a>
+      </div>
     </Link>
   )
 }
