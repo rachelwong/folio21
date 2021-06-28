@@ -5,6 +5,7 @@ import profileImage from '../public/main_image.png'
 import { FaTimes, FaBars } from 'react-icons/fa'
 import { motion } from 'framer-motion'
 import { useState} from 'react'
+import { HamburgerMenu } from './HamburgerMenu/index'
 
 const Navbar = () => {
 
@@ -13,7 +14,7 @@ const Navbar = () => {
   return (
 
     <header className={styles.header}>
-      <div className={`${styles['header-mob-menu']} ${toggleMenu == true ? styles['show-menu'] : styles['hide-menu']}`}>
+      {/* <div className={`${styles['header-mob-menu']} ${toggleMenu == true ? styles['show-menu'] : styles['hide-menu']}`}>
         <button className={`${styles['header-mob-btn']}`} onClick={ () => setToggleMenu(false)}>
           <FaTimes />
         </button>
@@ -61,17 +62,18 @@ const Navbar = () => {
               </li>
           </ul>
         </nav>
-      </div>
+      </div> */}
       <div className={ styles['header-wrapper']}>
       <nav className={styles.nav}>
           <div className={styles['nav-header']}>
-            <Link href="/" className="nav-home-link">
+            <Link href="/" className={styles['nav-home-link']}>
               <div className={styles['nav-homelink__wrapper']}>
                 <Image src={profileImage} width={48} height={48} alt={"portfolio home"} />
                 <span className={styles['nav-homelink__label']}>Rach Wong</span>
               </div>
             </Link>
-            <button className={styles['nav-toggle']} onClick={ () => setToggleMenu(true)}><FaBars /></button>
+            <HamburgerMenu className={styles['hamburger-menu'] }/>
+            {/* <button className={styles['nav-toggle']} onClick={ () => setToggleMenu(true)}><FaBars /></button> */}
           </div>
         <div className="nav-list-container">
           <ul className={styles['nav-list']}>
@@ -98,18 +100,14 @@ const Navbar = () => {
               </li>
               <li className={styles['nav-list-item']}>
                 <a target="_blank" href="http://www.bitbucket.com/rachel-wong" rel="noopener noreferrer">
-                  <a>
               <span className={styles['nav-list-item__num']} aria-hidden="true">04</span>
                   Bitbucket
-                  </a>
                 </a>
               </li>
               <li className={styles['nav-list-item']}>
                 <a target="_blank" href="http://www.linkedin.com/in/rachwong" rel="noopener noreferrer">
-                  <a>
               <span className={styles['nav-list-item__num']} aria-hidden="true">05</span>
                   Contact
-                  </a>
                 </a>
               </li>
             </ul>

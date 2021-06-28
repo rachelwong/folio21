@@ -2,14 +2,10 @@ import Head from 'next/head'
 import Carousel from '../components/Carousel'
 import Image from 'next/image'
 import Link from 'next/link'
-import DummyImage from '../public/footer-image.png'
-import LinkedoutImage from '../public/linkedout.png'
-import PrelovedImage from '../public/preloved.png'
 import { createClient } from 'contentful'
 import Shot from '../components/Shot'
 import styles from '../styles/Home.module.scss'
 import Plus from '../public/plus-solid.svg'
-// import Slider from "react-slick";
 import MiniCarousel from '../components/MiniCarousel'
 import { motion } from 'framer-motion';
 import "../node_modules/slick-carousel/slick/slick-theme.css"
@@ -21,7 +17,6 @@ import Project2Image1 from '../public/Linkedout1.png'
 import Project2Image2 from '../public/Linkedout2.png'
 import Project2Image3 from '../public/Linkedout3.png'
 import Container from 'react-bootstrap/Container';
-import Button from 'react-bootstrap/Button';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Braces from '../public/braces.svg'
@@ -51,7 +46,7 @@ export default function Home({ shots }) {
 
   const titleLine1 = "Hello I'm Rachel."
   const titleLine2 = "I am a front-end developer from Brisbane."
-  const titleLine3 = "I enjoy building interfaces & tech writing."
+  const titleLine3 = "I enjoy building interfaces & writing for tech."
 
   // variants for framer motion
   const sentence = {
@@ -77,7 +72,6 @@ export default function Home({ shots }) {
         opacity: 1,
       }
   }
-
   if (!shots.length) return ""
   return (
     <div className={styles.container}>
