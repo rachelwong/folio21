@@ -124,7 +124,7 @@ export default function Home({ shots }) {
           </motion.div>
           <motion.div className={`${styles['home__header__circle1']} ${styles['home-header__svgs']}`}
             initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
+            animate={{ opacity: .5 }}
             transition={{duration: 1.3, delay: 1.5}}
           >
             <Image src={Circle} width={300} height={ 300} />
@@ -138,21 +138,21 @@ export default function Home({ shots }) {
           </motion.div>
           <motion.div className={`${styles['home__header__circle3']} ${styles['home-header__svgs']}`}
             initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
+            animate={{ opacity: .8 }}
             transition={{duration: 1.5, delay: 1}}
           >
             <Image src={Circle} width={300} height={ 300} />
           </motion.div>
           <motion.div className={`${styles['home__header__funct1']} ${styles['home-header__svgs']}`}
             initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
+            animate={{ opacity: .3 }}
             transition={{duration: 1.5, delay: 1}}
           >
             <Image src={Funct} width={10} height={ 10} />
           </motion.div>
           <motion.div className={`${styles['home__header__arrow1']} ${styles['home-header__svgs']}`}
             initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
+            animate={{ opacity: .3 }}
             transition={{duration: 1.5, delay: 1}}
           >
             <Image src={Arrow} width={300} height={ 300} />

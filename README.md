@@ -14,3 +14,5 @@ https://stackoverflow.com/questions/64191373/how-to-add-code-block-for-code-snip
 * framer motion text reveal https://brad-carter.medium.com/how-to-animate-a-text-reveal-effect-in-react-with-framer-motion-ae8ddd296f0d (interestingly emojis doesn't work with this)
 
 * https://github.com/vercel/next.js/discussions/12810 extra module import in `next.config.js` to import sound into nextJS
+
+* unresolved error with passing classname as props when using styled components paired with nextjs. https://binyamin.medium.com/solving-the-styled-components-warning-in-next-js-with-babel-83080e45a0ff
