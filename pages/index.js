@@ -85,7 +85,7 @@ export default function Home({ shots }) {
         <link rel="manifest" href="/site.webmanifest" />
         <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
         <meta name="msapplication-TileColor" content="#da532c" />
-        <link rel="stylesheet" type="text/css" charSet="UTF-8" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" />
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" />
         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />
         <meta name="theme-color" content="#ffffff" />
       </Head>
@@ -105,7 +105,7 @@ export default function Home({ shots }) {
               duration: 2,
               delay: 0.5
             }} >
-            <Image src={Braces} width={300} height={ 300} />
+            <Image src={Braces} width={300} height={ 300} alt="" aria-hidden={true} />
           </motion.div>
           <motion.div
             className={`${styles['home__header__star1']} ${styles['home-header__svgs']}`}
@@ -113,49 +113,49 @@ export default function Home({ shots }) {
             animate={{ opacity: 1 }}
             transition={{duration: 1.5, delay: 1}}
           >
-            <Image src={Star} width={300} height={ 300} />
+            <Image src={Star} width={300} height={300} alt="" aria-hidden={ true} />
           </motion.div>
           <motion.div className={`${styles['home__header__hex2']} ${styles['home-header__svgs']}`}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{duration: 1.3, delay: 1.5}}
           >
-            <Image src={Hex} width={300} height={ 300} />
+            <Image src={Hex} width={300} height={300} alt="" aria-hidden={ true } />
           </motion.div>
           <motion.div className={`${styles['home__header__circle1']} ${styles['home-header__svgs']}`}
             initial={{ opacity: 0 }}
             animate={{ opacity: .5 }}
             transition={{duration: 1.3, delay: 1.5}}
           >
-            <Image src={Circle} width={300} height={ 300} />
+            <Image src={Circle} width={300} height={300} alt="" aria-hidden={ true }/>
           </motion.div>
           <motion.div className={`${styles['home__header__circle2']} ${styles['home-header__svgs']}`}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{duration: 1.3  , delay: 1.3}}
           >
-            <Image src={Circle} width={300} height={ 300} />
+            <Image src={Circle} width={300} height={300} alt="" aria-hidden={ true }/>
           </motion.div>
           <motion.div className={`${styles['home__header__circle3']} ${styles['home-header__svgs']}`}
             initial={{ opacity: 0 }}
             animate={{ opacity: .8 }}
             transition={{duration: 1.5, delay: 1}}
           >
-            <Image src={Circle} width={300} height={ 300} />
+            <Image src={Circle} width={300} height={300} alt="" aria-hidden={ true }/>
           </motion.div>
           <motion.div className={`${styles['home__header__funct1']} ${styles['home-header__svgs']}`}
             initial={{ opacity: 0 }}
             animate={{ opacity: .3 }}
             transition={{duration: 1.5, delay: 1}}
           >
-            <Image src={Funct} width={10} height={ 10} />
+            <Image src={Funct} width={10} height={10} alt="" aria-hidden={ true }/>
           </motion.div>
           <motion.div className={`${styles['home__header__arrow1']} ${styles['home-header__svgs']}`}
             initial={{ opacity: 0 }}
             animate={{ opacity: .3 }}
             transition={{duration: 1.5, delay: 1}}
           >
-            <Image src={Arrow} width={300} height={ 300} />
+            <Image src={Arrow} width={300} height={300} alt="" aria-hidden={ true }/>
           </motion.div>
 
         </motion.div>
@@ -209,19 +209,19 @@ export default function Home({ shots }) {
               <ul className={styles['project-tags']}>
                 <li>
                 <span className={styles['project-tags__plus']}>
-                  <Image src={Plus} width={10} height={10} alt={"Techstack"} />
+                    <Image src={Plus} width={10} height={10} alt={"Techstack"} alt="" aria-hidden={ true } />
                 </span>
                 <span>Ruby</span></li>
                 <li>              <span className={styles['project-tags__plus']}>
-                  <Image src={Plus} width={10} height={10} alt={"Techstack"}/>
+                  <Image src={Plus} width={10} height={10} alt={"Techstack"} alt="" aria-hidden={ true }/>
                 </span>
                 <span>Rails</span></li>
                 <li>              <span className={styles['project-tags__plus']}>
-                  <Image src={Plus} width={10} height={10} alt={"Techstack"}/>
+                  <Image src={Plus} width={10} height={10} alt={"Techstack"} alt="" aria-hidden={ true }/>
                 </span>
                 <span>Gems</span></li>
                 <li>              <span className={styles['project-tags__plus']}>
-                  <Image src={Plus} width={10} height={10} alt={"Techstack"}/>
+                  <Image src={Plus} width={10} height={10} alt={"Techstack"} alt="" aria-hidden={ true }/>
                 </span>
                   <span>Bootstrap</span>
                 </li>
@@ -251,29 +251,29 @@ export default function Home({ shots }) {
               <ul className={styles['project-tags']}>
                 <li>
                   <span className={styles['project-tags__plus']}>
-                    <Image src={Plus} width={10} height={10} alt={"Techstack"} />
+                    <Image src={Plus} width={10} height={10} alt={"Techstack"} alt="" aria-hidden={ true } />
                   </span>
                   <span>MongoDB</span></li>
                 <li>
                   <span className={styles['project-tags__plus']}>
-                    <Image src={Plus} width={10} height={10} alt={"Techstack"}/>
+                    <Image src={Plus} width={10} height={10} alt={"Techstack"} alt="" aria-hidden={ true }/>
                   </span>
                   <span>Express</span></li>
                 <li>
                   <span className={styles['project-tags__plus']}>
-                    <Image src={Plus} width={10} height={10} alt={"Techstack"}/>
+                    <Image src={Plus} width={10} height={10} alt={"Techstack"} alt="" aria-hidden={ true }/>
                   </span>
                   <span>React</span>
                 </li>
                 <li>
                   <span className={styles['project-tags__plus']}>
-                    <Image src={Plus} width={10} height={10} alt={"Techstack"}/>
+                    <Image src={Plus} width={10} height={10} alt={"Techstack"} alt="" aria-hidden={ true }/>
                   </span>
                   <span>Node</span>
                 </li>
                 <li>
                   <span className={styles['project-tags__plus']}>
-                    <Image src={Plus} width={10} height={10} alt={"Techstack"}/>
+                    <Image src={Plus} width={10} height={10} alt={"Techstack"} alt="" aria-hidden={ true }/>
                   </span>
                   <span>Bulma</span>
                 </li>

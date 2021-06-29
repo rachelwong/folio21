@@ -13,7 +13,6 @@ const Footer = () => {
       <footer className={styles.footer}>
         <div className={styles['footer-wrapper']}>
           <div className={styles['footer-image-wrapper']}>
-            {/* <Image src={footerImage} width={180} height={ 220}/> */}
           </div>
           <div className={styles['footer-nav-wrapper']}>
             <nav className={styles['footer-nav']}>
@@ -28,35 +27,35 @@ const Footer = () => {
                   <Link href="/illustration">Illustration</Link>
                 </li>
                 <li>
-                  <Link href="http://www.bitbucket.com/rachel-wong" target="_blank">Bitbucket</Link>
+                  <Link href="http://www.bitbucket.com/rachel-wong" target="_blank" rel="noopener noreferrer">Bitbucket</Link>
                 </li>
                 <li>
-                  <Link href="http://www.linkedin.com/in/rachwong" target="_blank">Contact</Link>
+                  <Link href="http://www.linkedin.com/in/rachwong" target="_blank" rel="noopener noreferrer">Contact</Link>
                 </li>
               </ul>
             </nav>
             <nav className={styles['footer-social-nav']}>
             <ul className={styles['footer-social-nav__list']}>
               <li>
-                <Link href="http://www.github.com/rachelwong">
+                <Link href="http://www.github.com/rachelwong" target="_blank" rel="noopener noreferrer">
                   <a className={ styles['footer-social-nav__list__link']}>
-                    <Image src={GithubIcon} width={20} height={ 20}/>
+                    <Image src={GithubIcon} width={20} height={ 20} alt="Github link" />
                     <span className="sr-only">Github account</span>
                   </a>
                 </Link>
               </li>
               <li>
-                <Link href="http://www.instagram.com/itsonlyher">
+                <Link href="http://www.instagram.com/itsonlyher" target="_blank" rel="noopener noreferrer">
                   <a className={ styles['footer-social-nav__list__link']}>
-                    <Image src={InstagramIcon} width={20} height={ 20}/>
+                    <Image src={InstagramIcon} width={20} height={ 20} alt="Instagram link" />
                     <span className="sr-only">Instagram</span>
                   </a>
                 </Link>
               </li>
               <li>
-                <Link href="http://www.linkedin.com/in/rachwong">
+                <Link href="http://www.linkedin.com/in/rachwong" target="_blank" rel="noopener noreferrer">
                   <a className={ styles['footer-social-nav__list__link']}>
-                    <Image src={LinkedinIcon} width={20} height={ 20}/>
+                    <Image src={LinkedinIcon} width={20} height={ 20} alt="Linkedin link"/>
                     <span className="sr-only">Linkedin</span>
                   </a>
                 </Link>

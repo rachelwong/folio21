@@ -20,13 +20,13 @@ const MiniCarousel = ({ slide1, slide2, slide3}) => {
   return (
       <Slider {...settings}>
         <div className={styles['carousel--mini__slide']}>
-          <Image src={slide1} width={1000} height={540} alt="Project" className={ styles['carousel--mini__slide__image']} />
+          <Image src={slide1} width={1000} height={540} alt="Project" className={ styles['carousel--mini__slide__image']} alt="Project snapshot 1 of 3" />
           </div>
         <div className={styles['carousel--mini__slide']}>
-            <Image src={ slide2 } width={1000} height={ 540 } alt="Project" className={ styles['carousel--mini__slide__image']} />
+            <Image src={ slide2 } width={1000} height={ 540 } alt="Project" className={ styles['carousel--mini__slide__image']} alt="Project snapshot 2 of 3 "/>
           </div>
         <div className={styles['carousel--mini__slide']}>
-            <Image src={ slide3 } width={1000} height={ 540 } alt="Project" className={ styles['carousel--mini__slide__image']} />
+            <Image src={ slide3 } width={1000} height={ 540 } alt="Project" className={ styles['carousel--mini__slide__image']} alt="Project snapshot 3 of 3"/>
           </div>
       </Slider>
   )

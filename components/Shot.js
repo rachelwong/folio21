@@ -9,14 +9,14 @@ const Shot = ({ shot }) => {
   return (
     <div className={styles['shot-wrapper']}>
       <div className={styles['shot-svg']} >
-        <Image src={Cog} width={170} height={170} className={ styles['shot-gear__image']}/>
+        <Image src={Cog} width={170} height={170} className={styles['shot-gear__image']} alt="" aria-hidden={ true }/>
       </div>
         <a href={repoLink} className={styles['shot-link']} rel="noreferrer" target="_blank">
           <div className={ styles['shot-link__content']}>
           <h4 className={styles['shot-title']}>
             {projectName}
             <span className={styles['shot-title__arrow']}>
-              <Image src={Arrow} width={18} height={18} className={ styles['shot-title__arrow-image']} />
+              <Image src={Arrow} width={18} height={18} className={ styles['shot-title__arrow-image']} alt="" aria-hidden={ true } />
             </span>
           </h4>
               <ul className={ styles['shot-tags']}>

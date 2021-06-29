@@ -1,6 +1,5 @@
 import styles from '../styles/Illo.module.scss'
 import { createClient} from 'contentful'
-import Image from 'next/image'
 import 'photoswipe/dist/photoswipe.css'
 import 'photoswipe/dist/default-skin/default-skin.css'
 import { Gallery, Item } from 'react-photoswipe-gallery'
@@ -50,19 +49,10 @@ const illustration = ({ images }) => {
                     transition={{
                       duration: 0.5
                     }}
+                    alt="Illustration - Rachel Wong"
                   />
                   )}
                 </Item>
-
-              // <a key={ imageIdx} href={ 'https:' + image.fields.image.fields.file.url }>
-              //   <Image
-              //     src={ 'https:' + image.fields.thumbnail.fields.file.url }
-              //     alt={ image.fields.title }
-              //     width={420}
-              //     height={420}
-              //     srl_gallery_image="true"
-              //   />
-              // </a>
             ))}
           </Gallery>
         </div>

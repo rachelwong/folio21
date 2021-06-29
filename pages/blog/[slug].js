@@ -171,7 +171,7 @@ const Post = ({ post }) => {
           {router.pathname !== "/" && (
           <button onClick={() => router.back()} className={styles['post-footer-nav__btn']}>
             <span className={styles['post-footer-nav__btn__label'] }>Go Back</span>
-            <Image src={Arrow} width={15} height={ 15} />
+            <Image src={Arrow} width={15} height={ 15} alt="" aria-hidden={ true }/>
           </button>
           )}
       </div>

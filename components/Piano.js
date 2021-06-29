@@ -38,6 +38,7 @@ const Piano = () => {
         duration: .3,
         ease: 'easeIn'
       }}
+      aria-hidden={true }
     >
       <div className={styles.piano__inner}>
         <div className={styles['piano-screen']}>

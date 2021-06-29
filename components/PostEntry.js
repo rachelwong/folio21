@@ -17,8 +17,8 @@ const PostEntry = ({ post }) => {
       >
         <div className={ styles['post-entry-imagewrap']}>
           <Image src={'https:' + featureImage.fields.file.url} width={featureImage.fields.file.details.image.width}
-          height={featureImage.fields.file.details.image.height}
-              alt={title} />
+            height={featureImage.fields.file.details.image.height}
+            alt={title} aria-hidden={ false }/>
         </div>
         <time className={styles['post-entry-date']} dateTime={ publishedDate }>{parsedDate[2] + " " + month + " "+ parsedDate[0]}</time>
         <h3 className={ styles['post-entry-title']}>{ title }</h3>

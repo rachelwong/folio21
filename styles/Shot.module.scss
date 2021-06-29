@@ -118,20 +118,13 @@
   padding: .5rem 1.2rem;
   border-radius: 3rem;
   border: 1px solid #dbe3ea;
-  color: #8d9ca8;
+  background-color: #dbe3ea;
+  color: #4d575e;
   margin: 0.5rem .5rem;
-  background-color: transparent;
   transition: color 0.3s ease-out, background-color 0.3 ease-out;
   font-weight: 500;
-
   display:flex;
   flex-wrap: nowrap;
-  &:hover,
-  &:focus {
-    border: 1px solid #dbe3ea;
-    background-color: #dbe3ea;
-    color: #4d575e;
-  }
 }
 
 .shot-summary {
