@@ -1,8 +1,12 @@
 import Carousel from '../components/Carousel'
 import Link from 'next/link'
 import styles from '../styles/Notfound.module.scss'
+import Header from '../components/Header'
 const NotFound = () => {
   return (
+    <>
+    <Header title={ "404 Wrong page"} />
+
     <div className={styles.container}>
       <Carousel />
       <div className={styles['notfound-content']}>
@@ -14,7 +18,8 @@ const NotFound = () => {
           </a>
         </Link>
       </div>
-    </div>
+      </div>
+    </>
   )
 }
 

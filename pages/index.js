@@ -227,7 +227,7 @@ export default function Home({ shots }) {
                 </li>
                 <li>
                   <span className={styles['project-tags__plus']}>
-                  <Image src={Plus} width={10} height={10} alt={"Techstack"}/>
+                  <Image src={Plus} width={10} height={10} alt={"Techstack"} alt="" aria-hidden={ true }/>
                 </span>
                   <span>HTML5/CSS3</span>
                 </li>

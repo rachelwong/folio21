@@ -4,6 +4,7 @@ import 'photoswipe/dist/photoswipe.css'
 import 'photoswipe/dist/default-skin/default-skin.css'
 import { Gallery, Item } from 'react-photoswipe-gallery'
 import { motion } from 'framer-motion'
+import Header from '../components/Header'
 
 export const getStaticProps = async () => {
 
@@ -22,8 +23,13 @@ export const getStaticProps = async () => {
 }
 
 const illustration = ({ images }) => {
+
+
   if (!images.length) return ""
   return (
+    <>
+    <Header title={ "Illustration"} />
+
     <div className={styles['illo-container']}>
       <div className={styles['illo__inner']}>
         <div className={styles['illo__content']}>
@@ -57,7 +63,8 @@ const illustration = ({ images }) => {
           </Gallery>
         </div>
       </div>
-    </div>
+      </div>
+    </>
   )
 }
 

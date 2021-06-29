@@ -2,8 +2,7 @@ import styles from '../styles/Carousel.module.scss'
 import Slider from 'react-slick'
 import "../node_modules/slick-carousel/slick/slick-theme.css"
 import "../node_modules/slick-carousel/slick/slick.css"
-import image1 from '../public/footer-image.png'
-import image2 from '../public/main_image.png'
+
 const Carousel = () => {
 
   const settings = {
