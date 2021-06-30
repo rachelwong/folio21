@@ -23,6 +23,10 @@
   &:hover, &:focus {
     color: black;
   }
+    a, a:hover, a:focus {
+    color:black;
+  }
+
 }
 
 .post-entry-title {
@@ -81,5 +85,6 @@
 }
 
 .post-entry-title__link {
+
   cursor:pointer;
 }

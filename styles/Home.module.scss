@@ -492,13 +492,7 @@
   overflow: hidden !important;
   width: 100%;
   background: transparent;
-
-  @include respond(mobile) {
-  }
-
-  @include respond (tab-land) {
-    height: 6rem;
-  }
+  height: 7rem;
 }
 
 .home-header__text__btn {
@@ -514,6 +508,7 @@
   position:relative;
   font-size: 2rem;
   display:inline-flex;
+  margin-top: 1rem;
 
   &:hover,
   &:focus {

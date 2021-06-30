@@ -20,8 +20,10 @@ const PostEntry = ({ post }) => {
             alt={title} aria-hidden={ false }/>
         </div>
       <time className={styles['post-entry-date']} dateTime={publishedDate}>{parsedDate[2] + " " + month + " " + parsedDate[0]}</time>
-        <Link href={'/blog/' + slug} rel=" noopener noreferrer" className={ styles['post-entry-title__link']}>
-          <h3 className={styles['post-entry-title']}>{title}</h3>
+      <Link href={'/blog/' + slug} rel=" noopener noreferrer" className={styles['post-entry-title__link']}>
+          <a href={'/blog/' + slug}>
+            <h3 className={styles['post-entry-title']}>{title}</h3>
+          </a>
         </Link>
         <ul className={ styles['post-entry-tags']}>{tags.length > 0 && tags.map((tag, tagIndex) => (
           <li key={ tagIndex }><span>{ tag }</span></li>
