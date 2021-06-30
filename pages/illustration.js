@@ -4,7 +4,8 @@ import 'photoswipe/dist/photoswipe.css'
 import 'photoswipe/dist/default-skin/default-skin.css'
 import { Gallery, Item } from 'react-photoswipe-gallery'
 import { motion } from 'framer-motion'
-import Header from '../components/Header'
+// import Header from '../components/Header'
+import Head from 'next/head'
 
 export const getStaticProps = async () => {
 
@@ -24,11 +25,30 @@ export const getStaticProps = async () => {
 
 const illustration = ({ images }) => {
 
-
   if (!images.length) return ""
   return (
     <>
-    <Header title={ "Illustration"} />
+      <Head>
+      <title>Illustrations | Rachel Wong front end developer</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta name="description" content="Front end Portfolio" />
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+        <link rel="manifest" href="/site.webmanifest" />
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+        <meta name="msapplication-TileColor" content="#da532c" />
+        <meta property="og:image" content="/social_screen.png"></meta>
+        <meta name="description" content="Rachel Wong's online portfolio for front end development" />
+        <meta property="og:type" content="website" />
+        <meta name="og:title" property="og:title" content="Rachel Wong | Front end developer" />
+        <meta name="og:description" property="og:description" content="" />
+        <meta property="og:site_name" content="Rachel Wong | Front end developer" />
+        <meta property="og:url" content="http://www.rachelwong.dev" />
+        <meta property="twitter:title" content={`Illustration | Rachel Wong Front end developer Brisbane`}></meta>
+        <meta property="og:title" content={`Illustration| Rachel Wong, Front end developer Brisbane`}></meta>
+    </Head>
 
     <div className={styles['illo-container']}>
       <div className={styles['illo__inner']}>
@@ -64,7 +84,7 @@ const illustration = ({ images }) => {
         </div>
       </div>
       </div>
-    </>
+      </>
   )
 }
 
