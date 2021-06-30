@@ -181,7 +181,15 @@ export default function Home({ shots }) {
                   </div>
                   <div className={styles['home-header__text__mask']}>
                     <motion.div initial={{ y: 100 }} animate={{ y: 0 }} transition={{ duration: 1, delay: 1}} className={styles['home-header__text__line--blurb']}>
-                    { titleLine3}
+                    { titleLine3 }
+                    </motion.div>
+                  </div>
+                  <div className={styles['home-header__text__mask--btn']}>
+                    <motion.div initial={{ y: 100 }} animate={{ y: 0 }} transition={{ duration: 1, delay: 1.5}} className={styles['home-header__text__line--blurb']}>
+                      <Link href="/RachelWong_CV.pdf" target="_blank">
+                        <a href="/RachelWong_CV.pdf" target="_blank" className={styles['home-header__text__btn']} >
+                          Download CV
+                        </a></Link>
                     </motion.div>
                   </div>
                 </motion.div>
@@ -199,52 +207,8 @@ export default function Home({ shots }) {
         <Row className={styles['projects-description']}>
           <h3 id="#projects">Projects</h3>
         </Row>
-        <Row className={`${styles['project-row']} ${styles['project-row--odd']}`}>
-          <Col lg={ 6} className={styles['project-imagewrapper']}>
-            <MiniCarousel slide1={Project1Image1} slide2={Project1Image2} slide3={Project1Image3} />
-          </Col>
-          <Col lg={6}>
-            <div className={styles['project-textwrapper__inner']}>
-              <h3 className={styles['project__title'] }>Preloved</h3>
-              <ul className={styles['project-tags']}>
-                <li>
-                <span className={styles['project-tags__plus']}>
-                    <Image src={Plus} width={10} height={10} alt={"Techstack"} alt="" aria-hidden={ true } />
-                </span>
-                <span>Ruby</span></li>
-                <li>              <span className={styles['project-tags__plus']}>
-                  <Image src={Plus} width={10} height={10} alt={"Techstack"} alt="" aria-hidden={ true }/>
-                </span>
-                <span>Rails</span></li>
-                <li>              <span className={styles['project-tags__plus']}>
-                  <Image src={Plus} width={10} height={10} alt={"Techstack"} alt="" aria-hidden={ true }/>
-                </span>
-                <span>Gems</span></li>
-                <li>              <span className={styles['project-tags__plus']}>
-                  <Image src={Plus} width={10} height={10} alt={"Techstack"} alt="" aria-hidden={ true }/>
-                </span>
-                  <span>Bootstrap</span>
-                </li>
-                <li>
-                  <span className={styles['project-tags__plus']}>
-                  <Image src={Plus} width={10} height={10} alt={"Techstack"} alt="" aria-hidden={ true }/>
-                </span>
-                  <span>HTML5/CSS3</span>
-                </li>
-              </ul>
 
-              <p className={ styles['project__summary']}>A full-stack ruby-on-rails application that allows private owners of second hand musical instruments to list at compassionate prices for Queensland schools to purchase for their students.</p>
-            <div className={styles['project-actions']}>
-                <Link href="/">
-                  <a target="_blank" href="https://github.com/rachelwong/music" className={styles['project-actions__repolink']} ref="noopener noreferrer"> <span>See Source Code</span></a></Link>
-                <Link href="/">
-                  <a target="_blank" href="https://secret-mountain-45294.herokuapp.com/" rel="noopener noreferrer" className={styles['project-actions__livelink']}>Go Live</a></Link>
-              </div>
-              </div>
-          </Col>
-        </Row>
-
-        <Row className={`${styles['project-row']} ${styles['project-row--even']}`}>
+<Row className={`${styles['project-row']} ${styles['project-row--even']}`}>
           <Col lg={6}>
             <div className={styles['project-textwrapper__inner']}>
               <h3 className={styles['project__title'] }>LinkedOut</h3>
@@ -294,6 +258,53 @@ export default function Home({ shots }) {
           </Col>
 
         </Row>
+
+        <Row className={`${styles['project-row']} ${styles['project-row--odd']}`}>
+          <Col lg={ 6} className={styles['project-imagewrapper']}>
+            <MiniCarousel slide1={Project1Image1} slide2={Project1Image2} slide3={Project1Image3} />
+          </Col>
+          <Col lg={6}>
+            <div className={styles['project-textwrapper__inner']}>
+              <h3 className={styles['project__title'] }>Preloved</h3>
+              <ul className={styles['project-tags']}>
+                <li>
+                <span className={styles['project-tags__plus']}>
+                    <Image src={Plus} width={10} height={10} alt={"Techstack"} alt="" aria-hidden={ true } />
+                </span>
+                <span>Ruby</span></li>
+                <li>              <span className={styles['project-tags__plus']}>
+                  <Image src={Plus} width={10} height={10} alt={"Techstack"} alt="" aria-hidden={ true }/>
+                </span>
+                <span>Rails</span></li>
+                <li>              <span className={styles['project-tags__plus']}>
+                  <Image src={Plus} width={10} height={10} alt={"Techstack"} alt="" aria-hidden={ true }/>
+                </span>
+                <span>Gems</span></li>
+                <li>              <span className={styles['project-tags__plus']}>
+                  <Image src={Plus} width={10} height={10} alt={"Techstack"} alt="" aria-hidden={ true }/>
+                </span>
+                  <span>Bootstrap</span>
+                </li>
+                <li>
+                  <span className={styles['project-tags__plus']}>
+                  <Image src={Plus} width={10} height={10} alt={"Techstack"} alt="" aria-hidden={ true }/>
+                </span>
+                  <span>HTML5/CSS3</span>
+                </li>
+              </ul>
+
+              <p className={ styles['project__summary']}>A full-stack ruby-on-rails application that allows private owners of second hand musical instruments to list at compassionate prices for Queensland schools to purchase for their students.</p>
+            <div className={styles['project-actions']}>
+                <Link href="/">
+                  <a target="_blank" href="https://github.com/rachelwong/music" className={styles['project-actions__repolink']} ref="noopener noreferrer"> <span>See Source Code</span></a></Link>
+                <Link href="/">
+                  <a target="_blank" href="https://secret-mountain-45294.herokuapp.com/" rel="noopener noreferrer" className={styles['project-actions__livelink']}>Go Live</a></Link>
+              </div>
+              </div>
+          </Col>
+        </Row>
+
+
       </Container>
 
       <div className={styles['shots-container']}>

@@ -110,8 +110,8 @@ export const getStaticProps = async ({ params }) => {
   return {
     props: {
       post: res.items[0], // pass in only the first one because slugs are unique
-      revalidate: 1
-    }
+    },
+    revalidate: 1
   }
 
   if (!items.length) {
