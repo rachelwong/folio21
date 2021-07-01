@@ -5,6 +5,7 @@
   flex: 1 1 auto; /* push footer down to bottom no matter what happens */
   position:relative;
   margin-top: -8.9rem;
+  z-index: 1;
 }
 
 .post-banner {
@@ -13,7 +14,7 @@
   height: 40rem;
   width: 100%;
   overflow: hidden;
-  z-index: -1;
+  z-index: 1;
   margin-top: -30rem;
 }
 
@@ -25,14 +26,14 @@
 
   @include respond(mobile){
   margin-top: -25rem;
-
   }
 }
 
 .post-banner__title {
   font-size: 5rem;
   font-family: var(--SpaceGrotesk);
-  margin-top: 1rem;
+  margin: 1rem auto 0;
+  max-width: 65%;
 }
 
 .post-banner__blurb {
@@ -52,6 +53,7 @@
   margin: 0 auto;
   background: white;
     margin-top: 30rem;
+    z-index: 2
 
 }
 
@@ -109,6 +111,7 @@
   p {
     margin-bottom: 1rem;
   }
+
 }
 
 .post-footer-nav {

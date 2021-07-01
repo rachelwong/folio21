@@ -13,7 +13,6 @@
   @include respond(tablet) {
     padding: 0;
   }
-
 }
 
 .illo__inner {
@@ -23,12 +22,12 @@
   padding: 2rem 2rem 10rem;
 }
 
-.illo-gallery {
-}
+.illo-gallery {}
 
 .illo__content {
   padding: 4rem 0;
 }
+
 .illo__content__heading {
   font-size: 6rem;
   font-family: var(--SpaceGrotesk);

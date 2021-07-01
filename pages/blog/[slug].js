@@ -10,7 +10,7 @@ import { docco } from 'react-syntax-highlighter/dist/cjs/styles/hljs';
 import { useRouter } from "next/router"
 import Arrow from '../../public/arrow-right-solid.svg'
 import Image from 'next/image'
-
+import Head from 'next/head'
 // Initialise connection with contentful server
 const client = createClient({
   space: process.env.NEXT_CONTENTFUL_SPACE_ID,
@@ -150,8 +150,8 @@ const Post = ({ post }) => {
   const month = new Date(Number(parsedDate[0]), Number(parsedDate[1]), Number(parsedDate[2])).toLocaleString('default', { month: 'long' })
 
   return (
-<>
-      <Head>
+<div>
+    <Head>
       <title>{title} | Rachel Wong front end developer</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta name="description" content="Front end Portfolio" />
@@ -197,7 +197,8 @@ const Post = ({ post }) => {
           </button>
           )}
       </div>
-    </div></>
+      </div>
+    </div>
     )
 }
 
