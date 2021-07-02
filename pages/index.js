@@ -309,7 +309,7 @@ export default function Home({ shots }) {
 
       <div className={styles['shots-container']}>
         <div className={styles['shots-summary']}>
-          <h3 id="#shots">Practice Shots</h3>
+          <h3>Practice Shots</h3>
           <p>I learn by making incremental steps, these are some of my smaller projects to help me build a solid foundation understanding of code flow, fundamental concepts and problem solving. </p>
         </div>
         <div className={styles['shots-wrapper']}>
@@ -319,7 +319,14 @@ export default function Home({ shots }) {
         </div>
       </div>
 
-
+      <div className={styles['about-container']}>
+        <div className={styles['about-summary']}>
+          <h3>About me</h3>
+          <p>I am a front-end developer based in Brisbane. I have five years of public service experience serving two Queensland State government departments at various capacities before changing careers in 2018. I have extensive experience in public administration, data analytics, Sharepoint development. In a previous life, I also did freelance illustration using the Adobe Creative Suite. </p>
+          <p>I derive much personal satisfaction from being able to translate a static design into a live, fully functioning product. </p>
+         <p>I am a visual and interpersonal learner. I absorb, digest and retain knowledge from my peers and from rolling my sleeves up to work.</p>
+        </div>
+      </div>
 
     </div>
   )

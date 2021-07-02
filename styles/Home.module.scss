@@ -399,7 +399,15 @@
   max-width: 90rem;
   width: 90%;
   text-align: center;
-  padding: 10rem 0 5rem;
+  padding: 10rem 0 2rem;
+}
+
+.about-container {
+  margin: 0 auto;
+  max-width: 90rem;
+  width: 90%;
+  text-align: center;
+  padding: 5rem 0 6rem;
 }
 
 .shots-summary {
@@ -409,7 +417,7 @@
   margin: 0em auto 0;
 }
 
-.shots-summary h3 {
+.shots-summary h3{
   display:block;
   font-family: var(--SpaceGrotesk);
   font-size: 4rem;
@@ -419,6 +427,20 @@
   background-repeat: no-repeat;
 }
 
+.about-summary h3{
+  display:block;
+  font-family: var(--SpaceGrotesk);
+  font-size: 4rem;
+  background-image: linear-gradient(to bottom, #e3e3ed, #e3e3ed);
+  background-size: 20% 2rem;
+  background-position: 55% 110%, 0 90%;
+  background-repeat: no-repeat;
+  margin-bottom: 2rem;
+}
+.about-summary{
+  font-size: 1.7rem;
+  line-height: 1.6;
+}
 .shots-summary p {
   margin-top: 3rem;
   margin-bottom: 1rem;
@@ -527,7 +549,7 @@
     position: absolute;
     border-right: .3rem solid black;
     border-bottom: .3rem solid black;
-  transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
   }
 
   &:hover:after {
