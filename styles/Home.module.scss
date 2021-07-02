@@ -445,6 +445,20 @@
   margin-top: 3rem;
   margin-bottom: 1rem;
 }
+.about-language-wrapper {
+  list-style: none;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 3rem;
+  margin-left: -1rem;
+  margin-right: -1rem;
+
+  li {
+    margin: 1rem;
+  }
+}
 
 .shots-wrapper {
   padding: 3rem 0;

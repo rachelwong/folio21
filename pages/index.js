@@ -26,6 +26,15 @@ import Circle from '../public/circle.svg'
 import Funct from '../public/funct.svg'
 import Hex from '../public/hex.svg'
 import Piano from '../components/Piano'
+import HTML5Logo from '../public/html_logo.svg'
+import CSS3Logo from '../public/css3_logo.svg'
+import SassLogo from '../public/sass_logo.svg'
+import ReactLogo from '../public/react_logo.svg'
+import JavascriptLogo from '../public/js_logo.svg'
+import GithubLogo from '../public/github_logo.svg'
+import IllustratorLogo from '../public/illustrator_logo.svg'
+import PhotoshopLogo from '../public/photoshop_logo.svg'
+import MongodbLogo from '../public/mongodb_logo.svg'
 
 export const getStaticProps = async () => {
   const client = createClient({
@@ -326,6 +335,36 @@ export default function Home({ shots }) {
           <p>I derive much personal satisfaction from being able to translate a static design into a live, fully functioning product. </p>
          <p>I am a visual and interpersonal learner. I absorb, digest and retain knowledge from my peers and from rolling my sleeves up to work.</p>
         </div>
+        <ul className={styles['about-language-wrapper']}>
+          <li>
+            <Image src={HTML5Logo} width={80} height={80 } alt="HTML5" />
+          </li>
+          <li>
+            <Image src={CSS3Logo} width={80} height={80 }  alt="CSS3" />
+          </li>
+          <li>
+            <Image src={JavascriptLogo} width={80} height={80 }  alt="Javascript" />
+          </li>
+          <li>
+            <Image src={SassLogo} width={80} height={80 } alt="Sass" />
+          </li>
+          <li>
+            <Image src={ReactLogo} width={80} height={80 } alt="React" />
+          </li>
+          <li>
+            <Image src={GithubLogo} width={80} height={80 } alt="Github" />
+          </li>
+          <li>
+            <Image src={MongodbLogo} width={80} height={80 } alt="Mongo db" />
+          </li>
+          <li>
+            <Image src={PhotoshopLogo} width={80} height={80 } alt="Photoshop" />
+          </li>
+          <li>
+            <Image src={IllustratorLogo} width={80} height={80 }  alt="Illustrator" />
+          </li>
+
+        </ul>
       </div>
 
     </div>
