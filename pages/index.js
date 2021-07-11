@@ -122,7 +122,7 @@ export default function Home({ shots }) {
             animate={{ opacity: 1 }}
             transition={{duration: 1.5, delay: 1}}
           >
-            <Image src={Star} width={300} height={300} alt="" aria-hidden={ true} />
+            <Image src={Hex} width={300} height={300} alt="" aria-hidden={ true} />
           </motion.div>
           <motion.div className={`${styles['home__header__hex2']} ${styles['home-header__svgs']}`}
             initial={{ opacity: 0 }}
@@ -166,7 +166,14 @@ export default function Home({ shots }) {
           >
             <Image src={Arrow} width={300} height={300} alt="" aria-hidden={ true }/>
           </motion.div>
-
+          <motion.div
+            className={`${styles['home__header__circle4']} ${styles['home-header__svgs']}`}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: .85 }}
+            transition={{duration: 1.5, delay: 1}}
+          >
+            <Image src={Circle} width={30} height={30} alt="" aria-hidden={ true} />
+          </motion.div>
         </motion.div>
         <div className={styles['home-header__wrapper']}>
           <div className={styles['home-header__text']}>
