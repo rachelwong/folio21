@@ -50,6 +50,11 @@ const Navbar = () => {
                   Bitbucket
                 </a>
               </li>
+              <li className={styles['nav-list-item']}>  
+                <a target="_blank" href="http://www.github.com/rachelwong" rel="noopener noreferrer">
+                  Github
+                </a>
+              </li>
               <li className={styles['nav-list-item']}>
                 <a target="_blank" href="http://www.linkedin.com/in/rachwong" rel="noopener noreferrer">
                   Contact

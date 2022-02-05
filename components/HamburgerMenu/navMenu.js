@@ -128,6 +128,23 @@ export function NavMenu({ isOpen }) {
           variants={{
             show: {
               ...variants.show,
+              transition: { delay: 0.7, duration: 0.2 },
+            },
+            hide: {
+              ...variants.hide,
+              transition: { delay: 0.25, duration: 0.05 },
+            },
+          }}
+        >
+          <a href="http://www.github.com/rachelwong" target="_blank" rel="noopener noreferrer">Github</a>
+        </motion.li>
+        <motion.li
+          className={styles['hamburger-menu-navlink'] }
+          initial={false}
+          animate={isOpen ? "show" : "hide"}
+          variants={{
+            show: {
+              ...variants.show,
               transition: { delay: 0.8, duration: 0.2 },
             },
             hide: {

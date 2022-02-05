@@ -28,6 +28,9 @@ const Footer = () => {
                 <li>
                   <Link href="http://www.bitbucket.com/rachel-wong" target="_blank" rel="noopener noreferrer">Bitbucket</Link>
                 </li>
+                 <li>
+                  <Link href="http://www.github.com/rachelwong" target="_blank" rel="noopener noreferrer">Github</Link>
+                </li>
                 <li>
                   <Link href="http://www.linkedin.com/in/rachwong" target="_blank" rel="noopener noreferrer">Contact</Link>
                 </li>
