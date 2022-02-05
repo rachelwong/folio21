@@ -14,11 +14,6 @@ const PostEntry = ({ post }) => {
         animate={{ y: 0 }}
         transition={{ duration: 0.5}}
       >
-        <div className={ styles['post-entry-imagewrap']}>
-          <Image src={'https:' + featureImage.fields.file.url} width={featureImage.fields.file.details.image.width}
-            height={featureImage.fields.file.details.image.height}
-            alt={title} aria-hidden={ false }/>
-        </div>
       <time className={styles['post-entry-date']} dateTime={publishedDate}>{parsedDate[2] + " " + month + " " + parsedDate[0]}</time>
       <Link href={'/blog/' + slug} rel=" noopener noreferrer" className={styles['post-entry-title__link']}>
           <a href={'/blog/' + slug}>
