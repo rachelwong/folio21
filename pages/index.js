@@ -55,7 +55,7 @@ export default function Home({ shots }) {
 
   const titleLine1 = "Hello I'm Rachel."
   const titleLine2 = "I am a front-end developer from Brisbane."
-  const titleLine3 = "I enjoy building interfaces & writing for tech."
+  const titleLine3 = "I enjoy building interfaces & learning new tech."
 
   // variants for framer motion
   const sentence = {
