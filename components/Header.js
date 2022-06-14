@@ -24,7 +24,6 @@ const Header = ({ title }) => {
         <meta property="twitter:title" content={`${title} | Rachel Wong Front end developer Brisbane`}></meta>
         <meta property="og:title" content={`${title} | Rachel Wong, Front end developer Brisbane`}></meta>
     </Head>
-    <h1>Hello header</h1></>
   )
 }
 
