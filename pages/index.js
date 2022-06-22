@@ -259,7 +259,7 @@ export default function Home({ shots }) {
                 </li>
               </ul>
 
-              <p className={ styles['project__summary'] }>LinkedOut is a full-stack MERN app where coding bootcamp graduates can list their profiles publicly for prospective employers and business clients to view and connect with for work opporunities.</p>
+              <p className={ styles['project__summary'] }>LinkedOut is a full-stack MERN app where coding bootcamp graduates can list their profiles publicly for prospective employers and business clients to view and connect with for work opportunities. Completed as a group project.</p>
             <div className={styles['project-actions']}>
                 <Link href="/">
                   <a target="_blank" href="https://github.com/rachelwong/linkedout-mern-client" className={styles['project-actions__repolink']} rel="noopener noreferrer"> <span>See Source Code</span></a></Link>
