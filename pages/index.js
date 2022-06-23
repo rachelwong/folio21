@@ -231,29 +231,29 @@ export default function Home({ shots }) {
               <ul className={styles['project-tags']}>
                 <li>
                   <span className={styles['project-tags__plus']}>
-                    <Image src={Plus} width={10} height={10} alt={"Techstack"} alt="" aria-hidden={ true } />
+                    <Image src={Plus} width={10} height={10} alt={"Techstack"} aria-hidden={ true } />
                   </span>
                   <span>MongoDB</span></li>
                 <li>
                   <span className={styles['project-tags__plus']}>
-                    <Image src={Plus} width={10} height={10} alt={"Techstack"} alt="" aria-hidden={ true }/>
+                    <Image src={Plus} width={10} height={10} alt={"Techstack"} aria-hidden={ true }/>
                   </span>
                   <span>Express</span></li>
                 <li>
                   <span className={styles['project-tags__plus']}>
-                    <Image src={Plus} width={10} height={10} alt={"Techstack"} alt="" aria-hidden={ true }/>
+                    <Image src={Plus} width={10} height={10} alt={"Techstack"}  aria-hidden={ true }/>
                   </span>
                   <span>React</span>
                 </li>
                 <li>
                   <span className={styles['project-tags__plus']}>
-                    <Image src={Plus} width={10} height={10} alt={"Techstack"} alt="" aria-hidden={ true }/>
+                    <Image src={Plus} width={10} height={10} alt={"Techstack"} aria-hidden={ true }/>
                   </span>
                   <span>Node</span>
                 </li>
                 <li>
                   <span className={styles['project-tags__plus']}>
-                    <Image src={Plus} width={10} height={10} alt={"Techstack"} alt="" aria-hidden={ true }/>
+                    <Image src={Plus} width={10} height={10} alt={"Techstack"} aria-hidden={ true }/>
                   </span>
                   <span>Bulma</span>
                 </li>
@@ -285,25 +285,25 @@ export default function Home({ shots }) {
               <ul className={styles['project-tags']}>
                 <li>
                 <span className={styles['project-tags__plus']}>
-                    <Image src={Plus} width={10} height={10} alt={"Techstack"} alt="" aria-hidden={ true } />
+                    <Image src={Plus} width={10} height={10} alt={"Techstack"} aria-hidden={ true } />
                 </span>
                 <span>Ruby</span></li>
                 <li>              <span className={styles['project-tags__plus']}>
-                  <Image src={Plus} width={10} height={10} alt={"Techstack"} alt="" aria-hidden={ true }/>
+                  <Image src={Plus} width={10} height={10} alt={"Techstack"} aria-hidden={ true }/>
                 </span>
                 <span>Rails</span></li>
                 <li>              <span className={styles['project-tags__plus']}>
-                  <Image src={Plus} width={10} height={10} alt={"Techstack"} alt="" aria-hidden={ true }/>
+                  <Image src={Plus} width={10} height={10} alt={"Techstack"} aria-hidden={ true }/>
                 </span>
                 <span>Gems</span></li>
                 <li>              <span className={styles['project-tags__plus']}>
-                  <Image src={Plus} width={10} height={10} alt={"Techstack"} alt="" aria-hidden={ true }/>
+                  <Image src={Plus} width={10} height={10} alt={"Techstack"} aria-hidden={ true }/>
                 </span>
                   <span>Bootstrap</span>
                 </li>
                 <li>
                   <span className={styles['project-tags__plus']}>
-                  <Image src={Plus} width={10} height={10} alt={"Techstack"} alt="" aria-hidden={ true }/>
+                  <Image src={Plus} width={10} height={10} alt={"Techstack"} aria-hidden={ true }/>
                 </span>
                   <span>HTML5/CSS3</span>
                 </li>
