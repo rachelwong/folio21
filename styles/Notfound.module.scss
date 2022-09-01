@@ -37,6 +37,7 @@
 }
 
 .notfound-content__blurb__link {
+  color:black;
   text-decoration: underline;
   transition: text-decoration 0.3s ease-out;
   &:hover, &:focus {

@@ -19,7 +19,7 @@ export const getStaticProps = async () => {
         posts: res.items
       },
       revalidate: 1 // to regenerate and requery for data when there are updates
-    }
+    } 
 }
 
 const blog = ({ posts }) => {
