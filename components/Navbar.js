@@ -20,7 +20,7 @@ const Navbar = () => {
             <Link href="/" className={styles['nav-home-link']}>
               <div className={styles['nav-homelink__wrapper']}>
                 <Image src={profileImage} width={48} height={48} alt="Rachel Wong's Portfolio home" aria-hidden={ false} />
-                <span className={styles['nav-homelink__label']}>Rach Wong</span>
+                <span className={styles['nav-homelink__label']}>Rachel Wong</span>
               </div>
             </Link>
             <HamburgerMenu className={styles['hamburger-menu'] }/>
@@ -50,7 +50,7 @@ const Navbar = () => {
                   Bitbucket
                 </a>
               </li>
-              <li className={styles['nav-list-item']}>  
+              <li className={styles['nav-list-item']}>
                 <a target="_blank" href="http://www.github.com/rachelwong" rel="noopener noreferrer">
                   Github
                 </a>
