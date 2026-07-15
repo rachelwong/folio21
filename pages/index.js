@@ -36,6 +36,7 @@ import IllustratorLogo from '../public/illustrator_logo.svg'
 import PhotoshopLogo from '../public/photoshop_logo.svg'
 import MongodbLogo from '../public/mongodb_logo.svg'
 
+// does not require pre-renderings
 export const getStaticProps = async () => {
   const client = createClient({
     space: process.env.NEXT_CONTENTFUL_SPACE_ID,
@@ -261,10 +262,10 @@ export default function Home({ shots }) {
 
               <p className={ styles['project__summary'] }>LinkedOut is a full-stack MERN app where coding bootcamp graduates can list their profiles publicly for prospective employers and business clients to view and connect with for work opportunities. Completed as a group project.</p>
             <div className={styles['project-actions']}>
+                {/* <Link href="/">
+                  <a target="_blank" href="https://github.com/rachelwong/linkedout-mern-client" className={styles['project-actions__repolink']} rel="noopener noreferrer"> <span>See Source Code</span></a></Link> */}
                 <Link href="/">
-                  <a target="_blank" href="https://github.com/rachelwong/linkedout-mern-client" className={styles['project-actions__repolink']} rel="noopener noreferrer"> <span>See Source Code</span></a></Link>
-                <Link href="/">
-                  <a target="_blank" href="https://linkedout.netlify.com/" className={styles['project-actions__livelink']} rel="noopener noreferrer">Go Live</a></Link>
+                  <a target="_blank" href="https://github.com/rachelwong/linkedout-mern-client/" className={styles['project-actions__livelink']} rel="noopener noreferrer">See repo</a></Link>
               </div>
               </div>
           </Col>
@@ -311,10 +312,10 @@ export default function Home({ shots }) {
 
               <p className={ styles['project__summary']}>A full-stack ruby-on-rails application that allows private owners of second hand musical instruments to list at compassionate prices for Queensland schools to purchase for their students.</p>
             <div className={styles['project-actions']}>
+                {/* <Link href="/">
+                  <a target="_blank" href="https://github.com/rachelwong/music" className={styles['project-actions__repolink']} ref="noopener noreferrer"> <span>See Source Code</span></a></Link> */}
                 <Link href="/">
-                  <a target="_blank" href="https://github.com/rachelwong/music" className={styles['project-actions__repolink']} ref="noopener noreferrer"> <span>See Source Code</span></a></Link>
-                <Link href="/">
-                  <a target="_blank" href="https://secret-mountain-45294.herokuapp.com/" rel="noopener noreferrer" className={styles['project-actions__livelink']}>Go Live</a></Link>
+                  <a target="_blank" href="https://github.com/rachelwong/music/" rel="noopener noreferrer" className={styles['project-actions__livelink']}>See repo</a></Link>
               </div>
               </div>
           </Col>
